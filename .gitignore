@@ -1,7 +1,5 @@
-# Minimal .gitignore for web projects
-.DS_Store
+# .gitignore
 node_modules/
-dist/
 *.log
-*.tmp
-*.swp
+.DS_Store
+*.bak
