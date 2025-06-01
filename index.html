@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Holy Bless - Divine Wisdom Generator</title>
   <style>
     :root {
@@ -37,7 +37,7 @@
       text-align: center;
       margin-bottom: 30px;
       color: white;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
 
     .header h1 {
@@ -66,7 +66,7 @@
       padding: 10px 18px;
       border: none;
       border-radius: 25px;
-      background: rgba(255, 255, 255, 0.25);
+      background: rgba(255,255,255,0.25);
       color: white;
       backdrop-filter: blur(15px);
       cursor: pointer;
@@ -75,10 +75,11 @@
     }
 
     .theme-selector:hover, .source-filter:hover {
-      background: rgba(255, 255, 255, 0.35);
+      background: rgba(255,255,255,0.35);
       transform: translateY(-2px);
     }
 
+    /* Centered Star Button Container */
     .star-button-container {
       display: flex;
       flex-direction: column;
@@ -99,13 +100,14 @@
       cursor: pointer;
       box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transform: scale(1);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 3em;
       color: white;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-      border: 3px solid rgba(255, 255, 255, 0.3);
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      border: 3px solid rgba(255,255,255,0.3);
       overflow: hidden;
     }
 
@@ -118,9 +120,9 @@
       height: 200%;
       background: conic-gradient(
         transparent,
-        rgba(255, 255, 255, 0.4),
+        rgba(255,255,255,0.4),
         transparent,
-        rgba(255, 255, 255, 0.4),
+        rgba(255,255,255,0.4),
         transparent
       );
       animation: rotate 3s linear infinite;
@@ -140,6 +142,36 @@
 
     .star-button:active {
       transform: scale(1.05) rotate(-5deg);
+    }
+
+    /* Splash Effect */
+    .star-button.splash {
+      animation: divineExplosion 2s ease-out;
+    }
+
+    @keyframes divineExplosion {
+      0% { 
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.8);
+      }
+      25% { 
+        transform: scale(1.3);
+        box-shadow: 
+          0 0 0 20px rgba(255, 215, 0, 0.6),
+          0 0 0 40px rgba(255, 165, 0, 0.4),
+          0 0 0 60px rgba(255, 69, 0, 0.2);
+      }
+      50% { 
+        transform: scale(1.2);
+        box-shadow: 
+          0 0 0 40px rgba(255, 215, 0, 0.4),
+          0 0 0 80px rgba(255, 165, 0, 0.2),
+          0 0 0 120px rgba(255, 69, 0, 0.1);
+      }
+      100% { 
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+      }
     }
 
     @keyframes rotate {
@@ -164,11 +196,12 @@
       margin-top: 20px;
       font-style: italic;
       font-size: 1.1em;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
       opacity: 0.9;
       text-align: center;
     }
 
+    /* Radiant Light Effect */
     .radiant-light {
       position: fixed;
       top: 50%;
@@ -176,7 +209,14 @@
       width: 300px;
       height: 300px;
       transform: translate(-50%, -50%);
-      background: radial-gradient(circle, rgba(255, 215, 0, 0.8) 0%, transparent 80%);
+      background: radial-gradient(
+        circle,
+        rgba(255, 215, 0, 0.8) 0%,
+        rgba(255, 165, 0, 0.6) 20%,
+        rgba(255, 69, 0, 0.4) 40%,
+        rgba(255, 20, 147, 0.2) 60%,
+        transparent 80%
+      );
       border-radius: 50%;
       pointer-events: none;
       z-index: 1000;
@@ -200,7 +240,7 @@
     }
 
     .quote-card {
-      background: rgba(255, 255, 250, 0.95);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(20px);
       border-radius: 25px;
       padding: 50px;
@@ -347,6 +387,7 @@
       line-height: 1.6;
     }
 
+    /* TTS Status Indicator */
     .tts-status {
       position: fixed;
       top: 30px;
@@ -371,6 +412,7 @@
       display: block;
     }
 
+    /* Theme variations */
     .theme-ocean {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     }
@@ -391,19 +433,19 @@
       .container {
         padding: 15px;
       }
-
+      
       .header h1 {
         font-size: 2.2em;
       }
-
+      
       .quote-card {
         padding: 30px;
       }
-
+      
       .quote-text {
         font-size: 1.3em;
       }
-
+      
       .star-button {
         width: 100px;
         height: 100px;
@@ -430,24 +472,23 @@
 
     <div class="controls">
       <select class="theme-selector" id="themeSelector">
-        <option value="theme-ocean">🌊 Ocean Depths</option>
-        <option value="theme-sunset">🌅 Sunset Glow</option>
-        <option value="theme-forest">🌿 Forest Wisdom</option>
-        <option value="theme-cosmic">🌌 Cosmic Mystery</option>
+        <option value="theme-ocean">Ocean Depths</option>
+        <option value="theme-sunset">Sunset Glow</option>
+        <option value="theme-forest">Forest Wisdom</option>
+        <option value="theme-cosmic">Cosmic Mystery</option>
       </select>
 
       <select class="source-filter" id="sourceFilter">
         <option value="all">All Sources</option>
         <option value="Alan Watts">Alan Watts</option>
         <option value="Buddha">Buddha</option>
-        <option value="Rumi">Rumi</option>
-        <option value="Seth Speaks">Seth Speaks</option>
-        <option value="Emerald Tablet">Emerald Tablet</option>
-        <option value="Law of One">Law of One</option>
-        <option value="Florence Scovel Shinn">Florence Scovel Shinn</option>
         <option value="Lao Tzu">Lao Tzu</option>
-        <option value="Carl Jung">Carl Jung</option>
-        <option value="Modern Wisdom">Modern Wisdom</option>
+        <option value="Rumi">Rumi</option>
+        <option value="Law of One">Law of One</option>
+        <option value="Emerald Tablet">Emerald Tablet</option>
+        <option value="Conversations with God">Conversations with God</option>
+        <option value="Seth Speaks">Seth Speaks</option>
+        <option value="Florence Scovel Shinn">Florence Scovel Shinn</option>
       </select>
     </div>
 
@@ -472,7 +513,7 @@
     </div>
 
     <div class="star-button-container">
-      <button id="starButton" class="star-button" aria-label="Receive divine wisdom">
+      <button id="starButton" class="star-button" onclick="generatePassage()" aria-label="Receive divine wisdom">
         <span class="star-icon">🌟</span>
       </button>
       <p class="star-button-text">Click the sacred star to receive your divine message</p>
@@ -498,7 +539,7 @@
   <div id="ttsStatus" class="tts-status"></div>
 
   <script>
-    // Sample extended spiritual passages (All entries now have unique IDs)
+    // Extended passages with much longer, more detailed content
     let passages = [
       // Conversations with God (Extended)
       { 
@@ -649,104 +690,9 @@
         id: 112, 
         source: "Carl Jung" 
       }
-      // Seth Speaks (Extended)
-{
-  text: "Your beliefs shape your health, your relationships, and your world. What you believe about yourself forms the foundation of your reality, for consciousness is the architect of your experience. When you believe you are unwell, you manifest illness. When you believe in abundance, you attract prosperity. The mind is the blueprint, the heart is the builder, and the soul is the overseer. Every thought you entertain, every emotion you embrace, and every story you tell yourself becomes the building blocks of your reality. To change your world, you must first change your beliefs. To heal your body, you must first heal your mind. To transform your life, you must first transform your consciousness. You are not a victim of your circumstances, but the creator of them. The universe is not outside of you—it is the expression of your innermost convictions.",
-  id: 113,
-  source: "Seth Speaks"
-},
-{
-  text: "You are not what you think you are. You are not your body, your job, your fears, or your limitations. You are a being of pure consciousness, an eternal soul wearing a human form. When you begin to see yourself as this soul, you no longer define yourself by external conditions. You become the observer of your thoughts, the director of your emotions, and the master of your reality. You are not here to survive but to thrive, not to struggle but to flow, not to suffer but to learn and evolve. Every experience you have is designed by your higher self to teach you the lessons you need most. When you align with this truth, you no longer live from a place of fear but from a place of creative power.",
-  id: 114,
-  source: "Seth Speaks"
-},
-{
-  text: "The self is not a fixed point but a process of becoming. You are not limited by your current identity or limitations, for your true nature is infinite. Your soul is not waiting to be found, but is already whole and complete. The only reason you feel incomplete is because you're identifying with the fragmented stories of your mind. When you remember that you are the creator, not the creation, you begin to live from a place of power rather than powerlessness. You are not a small self in a big world—you are the big Self experiencing a small world. This is not a metaphor, it is a truth waiting to be remembered.",
-  id: 115,
-  source: "Seth Speaks"
-},
-
-// Rumi (Extended)
-{
-  text: "You are not a drop in the ocean. You are the entire ocean in a drop. This is the divine paradox: that the infinite can be held in the finite, that the eternal can be seen in the moment. Every breath you take is a reminder of your connection to the source of all being. When you look at a single wave, you see motion, chaos, and limitation. But when you look at the ocean, you see stillness, harmony, and infinity. You are not limited by the physical form you wear—you are the formless light of the divine, dancing in human skin. When you realize this, the boundaries of self dissolve, and you remember who you truly are.",
-  id: 116,
-  source: "Rumi"
-},
-{
-  text: "What you seek is seeking you. The answers you long for, the love you desire, the peace you crave—these are not outside of you, but within. The universe is not hiding from you; it is calling you home. You do not find truth by searching for it in the external world, but by listening to the voice within. Every time you feel lost, it is not the universe that is distant—it is you who have forgotten your own divinity. When you align with your highest self, you become the magnetic center of all that is good, true, and beautiful. The divine is always near, always speaking, always waiting for you to hear.",
-  id: 117,
-  source: "Rumi"
-},
-{
-  text: "Don't grieve. Anything you lose comes round in another form. Nothing is ever truly lost in the grand design of your soul's journey. What appears as loss is actually a redirection, what seems like failure is a hidden success, and what looks like separation is a new beginning in disguise. The soul never loses anything; it only transforms it. When you let go of attachment to form, you open yourself to the flow of divine abundance. The universe is not a place of scarcity but of infinite possibility. What you call 'endings' are only doorways to new expressions of your being. Trust the divine timing of your life.",
-  id: 118,
-  source: "Rumi"
-},
-{
-  text: "Let yourself be silently drawn by the strange pull of what you really love. The soul speaks in whispers, not shouts. It draws you to what you were meant to be, not through force, but through quiet resonance. When you follow this inner call, you align with your true purpose and the universe supports you effortlessly. Every time you resist what you love, you create inner conflict. Every time you embrace it, you awaken to your divine potential. Love is not an emotion—it is the compass of your soul. When you move in alignment with your deepest love, you become the embodiment of your highest self.",
-  id: 119,
-  source: "Rumi"
-},
-{
-  text: "Be a lamp, or a lifeboat, or a ladder. Be a pair of eyes, be a hand, be a heart. The soul is not meant to exist in isolation but to serve as a conduit of light for others. When you become a vessel of divine love, you no longer ask, 'What do I need?' but 'How can I help?' Every act of service is a reflection of your own spiritual truth. The more you give, the more you receive—not because of karma, but because of alignment. When you serve from the heart, you become a mirror of the divine, and through you, the light shines into the world.",
-  id: 120,
-  source: "Rumi"
-},
-{
-  text: "Where there is ruin, there is hope for a treasure. What you perceive as broken is actually an opportunity for rebirth. The cracks in your life are not signs of failure but gateways to deeper wisdom. Every challenge is a divine teacher, every struggle is a sacred workshop, and every pain is a path to transformation. When you look at what you have lost, you see only the absence. But when you look at what you have gained, you see the divine unfolding. The treasure is not something external you must find—it is the lesson you must learn. The universe is not cruel, but wise. It gives you what you need to remember your greatness.",
-  id: 121,
-  source: "Rumi"
-},
-{
-  text: "Let the beauty of what you love be what you do. When you act from the heart, you become an instrument of divine harmony. The soul does not ask for permission to live fully—it only asks for your willingness to follow. When you align your actions with your deepest love, you are no longer bound by fear or limitation. You become a channel for the infinite. This is not about chasing happiness, but about living in alignment with your soul's purpose. When you do this, every moment becomes sacred, every action becomes meaningful, and every breath becomes a prayer of gratitude.",
-  id: 122,
-  source: "Rumi"
-},
-{
-  text: "The universe is not outside of you. Look inside yourself; everything that you want, you already are. The soul is not waiting for the world to change—it is already the world. When you look at the stars, you are not looking at distant light—you are looking at the reflection of your own inner radiance. The divine is not hiding from you; it is waiting for you to see it in your own being. When you recognize the universe within, you no longer need to seek it outside. You become the master of your reality and the author of your story. The truth is not in the faraway, but in the here and now of your own heart.",
-  id: 123,
-  source: "Rumi"
-},
-{
-  text: "You were born with wings. Why prefer to crawl through life? The soul is not meant to be limited by the weight of the world. You are not just a human being—you are a divine being having a human experience. Every time you choose to act from fear, you cut your wings. Every time you choose to act from love, you fly. The path of spiritual awakening is not about becoming something you are not, but about remembering who you have always been. When you stop crawling and begin to soar, you become the embodiment of your own potential. The wings are there. The choice is yours.",
-  id: 124,
-  source: "Rumi"
-},
-{
-  text: "Sell your cleverness and buy bewilderment. The mind is a tool, not a master. When you cling to logic and control, you close yourself off from the divine mystery that is the source of all wisdom. Bewilderment is not ignorance—it is the gateway to deeper knowing. When you let go of trying to understand everything, you open yourself to the infinite. The soul does not seek to master life—it seeks to be in harmony with it. When you surrender your need for certainty, you awaken to the wonder of existence. The universe is not a puzzle to be solved, but a mystery to be lived.",
-  id: 125,
-  source: "Rumi"
-},
-
-// Alan Watts (Extended)
-{
-  text: "You are the universe becoming conscious of itself. You are not a part of the universe—you are the universe experiencing itself as a human being. When you look at the stars, the universe is looking at itself. When you feel joy, the universe is celebrating through you. This is not metaphor but truth. You are not separate from the cosmos; you are the cosmos expressing itself in a new and beautiful way. When you realize this, you no longer ask, 'Why am I here?' but 'How can I be here more fully?' This is the path of spiritual awakening—not to escape life, but to live it with full awareness and presence.",
-  id: 126,
-  source: "Alan Watts"
-},
-{
-  text: "The only way to make sense out of change is to plunge into it, move with it, and join the dance. Life is not a problem to be solved, but a reality to be experienced. When you resist change, you create suffering. When you accept it, you find flow. The universe is not static—it is in constant motion, and so are you. Every breath you take is a moment of transformation. Every heartbeat is a rhythm of change. When you learn to move with the current of life, you become a vessel of harmony. This is not about control, but about surrender to the divine dance of existence.",
-  id: 127,
-  source: "Alan Watts"
-},
-{
-  text: "The meaning of life is to enjoy it. You do not need to find meaning in life—you are the meaning. Every moment is an opportunity to live fully, to love deeply, to create freely. When you stop searching for purpose and simply begin to live in the present, you discover that life is already perfect. The universe does not need you to fix it—it needs you to be it. When you stop trying to control the outcome and simply allow the experience, you become a participant in the divine play. This is not about escaping suffering, but about embracing the totality of life with open arms and an open heart.",
-  id: 128,
-  source: "Alan Watts"
-},
-{
-  text: "The self is a process, not a thing. You are not a fixed entity with a beginning and an end, but a flowing experience of becoming. When you try to fix yourself in time, you create inner conflict. But when you embrace the process, you become the dance of life itself. The universe is not a static picture but a dynamic, living expression of energy. You are not separate from this flow—you are the flow. When you stop trying to be 'you' and simply allow the current of being to move through you, you become one with the divine rhythm of existence.",
-  id: 129,
-  source: "Alan Watts"
-},
-{
-  text: "You are the universe trying to understand itself. You are not just a person in the world—you are the world asking itself questions. Every thought, every feeling, every action is the universe reflecting on its own nature. When you recognize this, you no longer feel lonely, but connected to the eternal now. You are not a spectator of life—you are the life itself. When you stop searching for answers outside of yourself, you begin to find them within. The universe is not a mystery to be solved, but a truth to be lived. You are the question and the answer, the seeker and the found.",
-  id: 130,
-  source: "Alan Watts"
-}
-
     ];
 
+    // Enhanced state management
     let usedPassages = JSON.parse(localStorage.getItem('usedPassages')) || [];
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     let quotesRead = parseInt(localStorage.getItem('quotesRead')) || 0;
@@ -759,7 +705,7 @@
       const splash = document.createElement('div');
       splash.className = 'radiant-light';
       document.body.appendChild(splash);
-
+      
       setTimeout(() => {
         if (document.body.contains(splash)) {
           document.body.removeChild(splash);
@@ -769,45 +715,49 @@
 
     // Enhanced TTS functionality
     function enhancedTTS(text, autoPlay = false) {
+      console.log("Enhanced TTS called with:", text.substring(0, 50) + "...");
+      
       if (!window.speechSynthesis) {
         showTTSStatus('TTS not supported', 'error');
         return null;
       }
 
       window.speechSynthesis.cancel();
-
+      
       const utterance = new SpeechSynthesisUtterance(text);
-      utterance.rate = 0.75;
+      utterance.rate = 0.75; // Slower for better comprehension
       utterance.pitch = 0.9;
       utterance.volume = 1.0;
-
+      
       const voices = window.speechSynthesis.getVoices();
       if (voices.length > 0) {
-        const preferredVoice = voices.find(voice =>
-          voice.name.includes('Google') ||
-          voice.name.includes('Microsoft') ||
-          voice.lang === 'en-US'
-        ) || voices[0];
-        utterance.voice = preferredVoice;
+        const preferredVoice = voices.find(voice => 
+          voice.lang.startsWith('en') && 
+          (voice.name.includes('Google') || voice.name.includes('Microsoft') || voice.name.includes('Natural'))
+        ) || voices.find(voice => voice.lang.startsWith('en')) || voices[0];
+        
+        if (preferredVoice) {
+          utterance.voice = preferredVoice;
+        }
       }
-
+      
       utterance.onstart = () => {
         showTTSStatus('🔊 Speaking sacred wisdom...', 'speaking');
       };
-
+      
       utterance.onend = () => {
         hideTTSStatus();
         currentUtterance = null;
       };
-
+      
       utterance.onerror = (event) => {
         console.error("TTS error:", event.error);
         showTTSStatus(`Voice error: ${event.error}`, 'error');
         currentUtterance = null;
       };
-
+      
       currentUtterance = utterance;
-
+      
       if (autoPlay) {
         setTimeout(() => {
           try {
@@ -818,72 +768,36 @@
           }
         }, 100);
       }
-
+      
       return utterance;
     }
 
-    // Display a quote in the card
-    function displayQuote(quote) {
-      const quoteCard = document.getElementById('quoteCard');
-      const quoteText = document.getElementById('quoteText');
-      const quoteSource = document.getElementById('quoteSource');
-
-      quoteText.textContent = `"${quote.text}"`;
-      quoteSource.textContent = `— ${quote.source}`;
-
-      quoteCard.style.display = 'block';
-      setTimeout(() => {
-        quoteCard.classList.add('show');
-      }, 100);
-
-      updateFavoriteButton();
-      updateStats();
-    }
-
-    // Toggle favorites
-    function toggleFavorite(quote) {
-      const existingIndex = favorites.findIndex(fav => fav.id === quote.id);
-      const isFavorited = existingIndex !== -1;
-
-      if (isFavorited) {
-        favorites.splice(existingIndex, 1);
-        showNotification('Removed from favorites');
-      } else {
-        favorites.push(quote);
-        showNotification('Added to favorites! ❤️');
-      }
-
-      localStorage.setItem('favorites', JSON.stringify(favorites));
-      updateFavoriteButton();
-    }
-
-    // Update favorite button state
-    function updateFavoriteButton() {
-      const favoriteBtn = document.getElementById('favoriteBtn');
-      if (currentQuote) {
-        const isFavorited = favorites.some(fav => fav.id === currentQuote.id);
-        favoriteBtn.textContent = isFavorited ? '💖 Saved' : '❤️ Save';
-        favoriteBtn.classList.toggle('favorited', isFavorited);
-      }
-    }
-
-    // Generate a new passage
+    // Enhanced quote generation with splash effect
     function generatePassage() {
       if (isGenerating) return;
+      
+      console.log("Generating divine passage...");
       isGenerating = true;
 
       const button = document.getElementById('starButton');
-      button.classList.add('splash');
+      
+      // Create radiant splash effect
       createRadiantSplash();
-
+      button.classList.add('splash');
+      
       setTimeout(() => {
         button.classList.remove('splash');
         isGenerating = false;
       }, 2000);
 
+      // Filter passages
       const sourceFilter = document.getElementById('sourceFilter').value;
-      let availablePassages = sourceFilter === 'all' ? passages : passages.filter(p => p.source.includes(sourceFilter));
-
+      let availablePassages = passages;
+      
+      if (sourceFilter !== 'all') {
+        availablePassages = passages.filter(p => p.source.includes(sourceFilter));
+      }
+      
       availablePassages = availablePassages.filter(p => !usedPassages.includes(p.id));
 
       if (availablePassages.length === 0) {
@@ -895,44 +809,89 @@
       const randomPassage = availablePassages[Math.floor(Math.random() * availablePassages.length)];
       usedPassages.push(randomPassage.id);
       localStorage.setItem('usedPassages', JSON.stringify(usedPassages));
-
+      
       quotesRead++;
       localStorage.setItem('quotesRead', quotesRead.toString());
-
+      
       currentQuote = randomPassage;
-      displayQuote(randomPassage);
-      enhancedTTS(randomPassage.text, true);
+      
+      // Delay to show after splash effect
+      setTimeout(() => {
+        displayQuote(randomPassage);
+        updateStats();
+      }, 500);
     }
 
-    // Share quote
-    function shareQuote(quote) {
-      const text = `"${quote.text}" — ${quote.source}`;
-      if (navigator.share) {
-        navigator.share({
-          title: "Sacred Wisdom from Holy Bless",
-          text: text,
-          url: window.location.href
-        }).catch(err => {
-          console.error("Share failed:", err);
-          showNotification("Failed to share. Try copying the quote instead.");
-        });
+    // Enhanced quote display
+    function displayQuote(quote) {
+      const quoteCard = document.getElementById('quoteCard');
+      const quoteText = document.getElementById('quoteText');
+      const quoteSource = document.getElementById('quoteSource');
+      
+      quoteText.textContent = `"${quote.text}"`;
+      quoteSource.textContent = `— ${quote.source}`;
+      
+      quoteCard.style.display = 'block';
+      setTimeout(() => {
+        quoteCard.classList.add('show');
+      }, 100);
+      
+      updateFavoriteButton();
+      
+      // Auto-play TTS with the longer passage
+      enhancedTTS(quote.text, true);
+      
+      // Setup button handlers
+      document.getElementById('playBtn').onclick = () => {
+        enhancedTTS(quote.text, true);
+      };
+      
+      document.getElementById('favoriteBtn').onclick = () => toggleFavorite(quote);
+      document.getElementById('shareBtn').onclick = () => shareQuote(quote);
+      document.getElementById('copyBtn').onclick = () => copyQuote(quote);
+    }
+
+    // Rest of your existing functions (favorites, share, copy, etc.)
+    function toggleFavorite(quote) {
+      const existingIndex = favorites.findIndex(fav => fav.id === quote.id);
+      
+      if (existingIndex === -1) {
+        favorites.push(quote);
+        showNotification('Added to favorites! ❤️');
       } else {
-        showNotification("Sharing not supported. Copy the quote to share.");
+        favorites.splice(existingIndex, 1);
+        showNotification('Removed from favorites');
+      }
+      
+      localStorage.setItem('favorites', JSON.stringify(favorites));
+      updateFavoriteButton();
+      updateStats();
+    }
+
+    function updateFavoriteButton() {
+      const favoriteBtn = document.getElementById('favoriteBtn');
+      if (currentQuote) {
+        const isFavorited = favorites.some(fav => fav.id === currentQuote.id);
+        favoriteBtn.textContent = isFavorited ? '💖 Saved' : '❤️ Save';
+        favoriteBtn.classList.toggle('favorited', isFavorited);
       }
     }
 
-    // Copy quote
-    function copyQuote(quote) {
-      const text = `"${quote.text}" — ${quote.source}`;
-      navigator.clipboard.writeText(text).then(() => {
-        showNotification("Quote copied to clipboard! 📋");
-      }).catch(err => {
-        console.error("Copy failed:", err);
-        showNotification("Failed to copy quote.");
-      });
+    function showTTSStatus(message, type = 'speaking') {
+      const statusEl = document.getElementById('ttsStatus');
+      statusEl.textContent = message;
+      statusEl.className = `tts-status ${type}`;
+      
+      if (type === 'error') {
+        setTimeout(() => hideTTSStatus(), 3000);
+      }
     }
 
-    // Show notification
+    function hideTTSStatus() {
+      const statusEl = document.getElementById('ttsStatus');
+      statusEl.style.display = 'none';
+    }
+
     function showNotification(message) {
       const notification = document.createElement('div');
       notification.style.cssText = `
@@ -951,7 +910,7 @@
       `;
       notification.textContent = message;
       document.body.appendChild(notification);
-
+      
       setTimeout(() => {
         if (document.body.contains(notification)) {
           document.body.removeChild(notification);
@@ -959,144 +918,79 @@
       }, 3000);
     }
 
-    // Show daily quote
+    // Daily quote, stats, and other utility functions
     function getDailyQuote() {
       const today = new Date().toDateString();
       const stored = localStorage.getItem('dailyQuote');
-
+      
       if (stored) {
         const dailyData = JSON.parse(stored);
         if (dailyData.date === today) {
           return dailyData.quote;
         }
       }
-
+      
       const dateHash = today.split('').reduce((a, b) => {
         a = ((a << 5) - a) + b.charCodeAt(0);
         return a & a;
       }, 0);
-
+      
       const index = Math.abs(dateHash) % passages.length;
       const dailyQuote = passages[index];
+      
       localStorage.setItem('dailyQuote', JSON.stringify({
         date: today,
         quote: dailyQuote
       }));
+      
       return dailyQuote;
     }
 
     function displayDailyQuote() {
       const dailyQuote = getDailyQuote();
-      const content = document.getElementById('dailyQuoteContent');
-      content.innerHTML = `
+      document.getElementById('dailyQuoteContent').innerHTML = `
         <p style="font-style: italic; font-size: 1.1em; margin-bottom: 10px;">"${dailyQuote.text.substring(0, 200)}..."</p>
         <small>— ${dailyQuote.source}</small>
       `;
     }
 
-    // Update stats
     function updateStats() {
       document.getElementById('totalQuotes').textContent = passages.length;
       document.getElementById('quotesRead').textContent = quotesRead;
       document.getElementById('favoriteCount').textContent = favorites.length;
     }
 
-    // Set theme
     function setTheme(theme) {
       document.body.className = theme;
       localStorage.setItem('selectedTheme', theme);
     }
 
+    // Event listeners
+    document.getElementById('themeSelector').addEventListener('change', (e) => {
+      setTheme(e.target.value);
+    });
+
     // Initialize app
     function initializeApp() {
+      console.log("Initializing Holy Bless app...");
+      
       const savedTheme = localStorage.getItem('selectedTheme') || 'theme-ocean';
       document.getElementById('themeSelector').value = savedTheme;
       setTheme(savedTheme);
-
+      
       displayDailyQuote();
       updateStats();
-
-      // Set event listeners
-      document.getElementById('starButton').addEventListener('click', generatePassage);
-      document.getElementById('playBtn').addEventListener('click', () => {
-        if (currentQuote) {
-          enhancedTTS(currentQuote.text, true);
-        }
-      });
-      document.getElementById('favoriteBtn').addEventListener('click', () => {
-        if (currentQuote) {
-          toggleFavorite(currentQuote);
-        }
-      });
-      document.getElementById('shareBtn').addEventListener('click', () => {
-        if (currentQuote) {
-          shareQuote(currentQuote);
-        }
-      });
-      document.getElementById('copyBtn').addEventListener('click', () => {
-        if (currentQuote) {
-          copyQuote(currentQuote);
-        }
-      });
-
-      // Theme selector
-      document.getElementById('themeSelector').addEventListener('change', (e) => {
-        setTheme(e.target.value);
-      });
-
-      // Initial notification
+      
       setTimeout(() => {
         showNotification('✨ Welcome to Holy Bless! Click the sacred star for divine guidance ✨');
       }, 1500);
     }
 
-    // TTS status
-    function showTTSStatus(message, type = 'speaking') {
-      const statusEl = document.getElementById('ttsStatus');
-      statusEl.textContent = message;
-      statusEl.className = `tts-status ${type}`;
-    }
-
-    function hideTTSStatus() {
-      const statusEl = document.getElementById('ttsStatus');
-      statusEl.style.display = 'none';
-    }
-
-    // Load app on DOM ready
-    if (document.readyState === 'complete') {
-      initializeApp();
-    } else {
+    if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', initializeApp);
+    } else {
+      initializeApp();
     }
   </script>
-
-  <!-- Ko-fi Button -->
-  <div class="ko-fi-button">
-    <a href="https://ko-fi.com/ezekielarts/tip" target="_blank" rel="noopener noreferrer">
-      <!-- Continue from where the script left off -->
-
-    <img 
-      src="https://www.ko-fi.com/img/social-share-btns/button-kofi.png" 
-      alt="Support on Ko-fi" 
-      style="width: 120px; height: auto; border-radius: 12px; transition: all 0.3s ease; border: 2px solid #FFD700;"
-    />
-      <p class="small">Thank you for supporting spiritual wisdom seekers everywhere!</p>
-    </div>
-  </div>
-
-  <!-- Ko-fi Button (Footer Placement) -->
-  <div class="ko-fi-button">
-    <a href="https://ko-fi.com/ezekielarts/tip" target="_blank" rel="noopener noreferrer">
-      <img 
-        src="https://www.ko-fi.com/img/social-share-btns/button-kofi.png" 
-        alt="Support on Ko-fi" 
-        style="width: 120px; height: auto; border-radius: 12px; transition: all 0.3s ease; border: 2px solid #FFD700;"
-        onmouseover="this.style.transform='scale(1.05)'; this.style.borderColor='gold';"
-        onmouseout="this.style.transform='scale(1)'; this.style.borderColor='gold';"
-      />
-    </a>
-  </div>
-
 </body>
 </html>
-
