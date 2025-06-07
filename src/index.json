@@ -1,0 +1,39 @@
+const express = require('express');
+const axios = require('axios');
+require('dotenv').config();
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware for JSON parsing
+app.use(express.json());
+
+// Basic route
+app.get('/', (req, res) => {
+    res.send('Welcome to the Sacred Geometry App!');
+});
+
+// Example route: get quotes from Wikipedia API (as a placeholder)
+app.get('/api/quotes', async (req, res) => {
+    try {
+        const response = await axios.get('https://en.wikipedia.org/w/api.php', {
+            params: {
+                action: 'query',
+                format: 'json',
+                list: 'search',
+                srsearch: 'sacred geometry',
+                srlimit: 3, // Limit results to 3
+            }
+        });
+        const quotes = response.data.query.search;
+        res.json(quotes);
+    } catch (error) {
+        console.error('Error fetching data from Wikipedia API:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+// Start the server
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
