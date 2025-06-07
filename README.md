@@ -12,6 +12,29 @@
 
 Divine Light is a beautifully crafted web application that delivers sacred wisdom from history's greatest spiritual teachers. With an elegant glassmorphism design and powerful features, it creates a meaningful digital sanctuary for daily inspiration and spiritual growth.
 
+holy-bless-divine-wisdom-generator/
+│
+├── public/
+│   ├── styles.css           # Main stylesheet for your application
+│   ├── app.js               # Main JavaScript file for your app logic
+│   └── index.html           # Main HTML file (entry point of the app)
+│
+├── src/                     # If using a modular structure and build tools
+│   ├── components/          # Reusable components (if using frameworks like React or Vue)
+│   ├── assets/              # Image files, icons, or other static assets
+│   └── utils/               # Utility functions or helpers (e.g., API call helpers)
+│
+├── tests/                   # Test files (if using testing frameworks)
+│   ├── app.test.js          # Unit tests for the app logic
+│   └── components.test.js    # Tests for components, if applicable
+│
+├── .gitignore               # Specifies intentionally untracked files to ignore
+├── README.md                # Project documentation (setup, usage, licensing)
+├── package.json             # Project configuration, dependencies, scripts
+├── LICENSE                  # License information for the project
+└── .env                     # Environment variables (if needed, not tracked by git)
+
+
 ### 🎯 Key Features
 
 - **🎨 Beautiful UI Design** - Glassmorphism effects with multiple theme options
