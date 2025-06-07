@@ -1,36 +1,39 @@
 {
-  "name": "sacred-geometry-app",
+  "name": "holy-bless-divine-wisdom-generator",
   "version": "1.0.0",
-  "description": "An application that explores and displays sacred geometry, sigils, and spiritual teachings using various APIs.",
+  "description": "An interactive web application that delivers daily inspirational quotes and wisdom from various spiritual traditions, fostering personal reflection and community engagement.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",  // Development mode for auto-restarting the server
+    "build": "webpack --config webpack.config.js",  // If using Webpack for bundling
+    "test": "jest"  // If using Jest for testing
   },
   "dependencies": {
-    "axios": "^0.27.2",   // To make HTTP requests to external APIs
-    "express": "^4.17.1", // To set up a web server framework
-    "dotenv": "^10.0.0"   // To manage environment variables
+    "express": "^4.17.1",           // For serving the application
+    "axios": "^0.27.2",             // For making API requests
+    "dotenv": "^10.0.0",            // For handling environment variables
+    "cors": "^2.8.5"                // For enabling Cross-Origin Resource Sharing
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"   // To automatically restart server during development
+    "nodemon": "^2.0.15",            // Development tool for auto-restarting
+    "webpack": "^5.64.4",            // Module bundler (if needed)
+    "webpack-cli": "^4.9.1",         // Command-line interface for Webpack
+    "jest": "^27.4.7"                // Testing framework
   },
   "keywords": [
-    "sacred",
-    "geometry",
-    "sigils",
+    "quotes",
+    "wisdom",
     "spirituality",
-    "API",
-    "OpenClipart",
-    "Wikipedia",
-    "Flickr",
-    "MetMuseum"
+    "growth",
+    "inspiration",
+    "community"
   ],
-  "author": "Thanattsitt Santisamranwilai", // Your name
-  "license": "MIT", // or another license of your choice
-  "homepage": "https://yourprojecthomepage.com", // Replace with your project's homepage
+  "author": "Your Name",            // Replace with your name
+  "license": "MIT",                 // Choose an appropriate license
+  "homepage": "https://yourprojecthomepage.com",  // Replace with your project homepage
   "repository": {
     "type": "git",
-    "url": "https://github.com/Pigletpeakkung/sacred-geometry-app.git" // Replace with your repo URL
+    "url": "https://github.com/yourusername/holy-bless-divine-wisdom-generator.git"  // Replace with your GitHub repo URL
   }
 }
