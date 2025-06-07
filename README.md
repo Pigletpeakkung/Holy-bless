@@ -12,7 +12,7 @@
 
 Divine Light is a beautifully crafted web application that delivers sacred wisdom from history's greatest spiritual teachers. With an elegant glassmorphism design and powerful features, it creates a meaningful digital sanctuary for daily inspiration and spiritual growth.
 
-holy-bless-divine-wisdom-generator/
+'holy-bless-divine-wisdom-generator/
 │
 ├── public/
 │   ├── styles.css           # Main stylesheet for your application
@@ -32,7 +32,7 @@ holy-bless-divine-wisdom-generator/
 ├── README.md                # Project documentation (setup, usage, licensing)
 ├── package.json             # Project configuration, dependencies, scripts
 ├── LICENSE                  # License information for the project
-└── .env                     # Environment variables (if needed, not tracked by git)
+└── .env                     # Environment variables (if needed, not tracked by git)'
 
 
 ### 🎯 Key Features
