@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Holy Bless - Your daily source of spiritual wisdom and inspiration. Discover divine quotes and reflect on your spiritual journey.">
+    <meta name="keywords" content="spiritual wisdom, daily quotes, inspiration, meditation, consciousness, divine wisdom">
+    <meta name="author" content="Than Attsitt">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Holy Bless - Divine Wisdom Generator">
+    <meta property="og:description" content="Your daily source of spiritual wisdom and inspiration">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pigletpeakkung.github.io/holy-bless-divine-wisdom-generator">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Holy Bless - Divine Wisdom Generator">
+    <meta name="twitter:description" content="Your daily source of spiritual wisdom and inspiration">
+    
+    <title>Holy Bless - Divine Wisdom Generator</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous">
+    
+    <!-- Toastify CSS for Notifications -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.2/Toastify.min.css" integrity="sha512-oe8OpYjBaDWPt0VQFjbvQjmjCWH1/MG+GdVz9LlxmCU0iKxg8OdWCLSqZJZWmehmOQXgOQQOPXtVfaWOOQFuZg==" crossorigin="anonymous">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-ocean">
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="display-3">✨ Holy Bless ✨</h1>
+            <p class="lead">Sacred wisdom from the masters of consciousness and divine light</p>
+            <p id="greetingMessage" class="font-weight-light"></p>
+        </header>
+
+        <!-- Controls Section -->
+        <section class="controls">
+            <div class="row w-100">
+                <div class="col-md-6 mb-2">
+                    <label for="themeSelector" class="mr-3">
+                        <i class="fas fa-palette"></i> Select Theme:
+                    </label>
+                    <select class="theme-selector form-control" id="themeSelector">
+                        <option value="theme-ocean">🌊 Ocean Depths</option>
+                        <option value="theme-sunset">🌅 Sunset Glow</option>
+                        <option value="theme-forest">🌲 Forest Wisdom</option>
+                        <option value="theme-cosmic">🌌 Cosmic Mystery</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-2">
+                    <label for="sourceFilter" class="mr-3">
+                        <i class="fas fa-filter"></i> Select Source:
+                    </label>
+                    <select class="source-filter form-control" id="sourceFilter">
+                        <option value="all">All Sources</option>
+                        <option value="Alan Watts">Alan Watts</option>
+                        <option value="Buddha">Buddha</option>
+                        <option value="Lao Tzu">Lao Tzu</option>
+                        <option value="Rumi">Rumi</option>
+                        <option value="Seth Speaks">Seth Speaks</option>
+                        <option value="Conversations with God">Conversations with God</option>
+                        <option value="Emerald Tablet">Emerald Tablet</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Quote Section -->
+        <section class="daily-quote" id="dailyQuote">
+            <h3><i class="fas fa-sun"></i> Today's Sacred Message</h3>
+            <blockquote id="dailyQuoteContent" class="blockquote text-center">
+                <p id="quoteText">Loading divine wisdom...</p>
+                <footer id="quoteAuthor" class="blockquote-footer"></footer>
+            </blockquote>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats text-center">
+            <h4><i class="fas fa-chart-line"></i> Your Spiritual Journey</h4>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="stat-item">
+                        <span class="stat-number" id="totalQuotes">0</span>
+                        <span><i class="fas fa-star"></i> Total Wisdom</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-item">
+                        <span class="stat-number" id="quotesRead">0</span>
+                        <span><i class="fas fa-book-open"></i> Messages Received</span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-item">
+                        <span class="stat-number" id="favoriteCount">0</span>
+                        <span><i class="fas fa-heart"></i> Favorites Saved</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reflection Area -->
+        <section id="reflectionArea">
+            <h4><i class="fas fa-feather-alt"></i> Your Sacred Reflections</h4>
+            <textarea 
+                id="userReflection" 
+                class="form-control" 
+                placeholder="What does this wisdom mean to you? How does it resonate with your soul? Share your thoughts and insights..."
+                rows="4"
+                aria-label="Write your reflection on the quote"
+            ></textarea>
+            <button class="btn btn-primary mt-3" onclick="saveReflection()">
+                <i class="fas fa-save"></i> Save Reflection
+            </button>
+        </section>
+
+        <!-- Star Button -->
+        <div class="star-button-container text-center">
+            <button 
+                id="starButton" 
+                class="star-button btn btn-warning" 
+                aria-label="Receive divine wisdom" 
+                onclick="generatePassage()"
+                title="Click to receive new wisdom (or press Space)"
+            >
+                <span class="star-icon">🌟</span>
+            </button>
+            <p class="star-button-text">Click the sacred star to receive your divine message</p>
+            <small class="text-muted">Tip: Press Space for new wisdom, Ctrl+S to save reflection</small>
+        </div>
+
+        <!-- Footer -->
+        <footer class="credit text-center">
+            <p>
+                <i class="fas fa-heart text-danger"></i> 
+                Sacred wisdom from the teachings of: 
+                <span class="font-weight-bold">
+                    Conversations with God, Seth Speaks, Rumi, Alan Watts, 
+                    Florence Scovel Shinn, Lao Tzu, Law of One, Emerald Tablet, Buddha
+                </span>
+            </p>
+            <div class="mt-3">
+                <p>Created with <i class="fas fa-heart text-danger"></i> by 
+                    <a href="https://github.com/Pigletpeakkung" target="_blank" rel="noopener">Than Attsitt</a>
+                </p>
+                <div class="social-links">
+                    <a href="https://paypal.me/@thanattsittS" target="_blank" rel="noopener" title="Support via PayPal">
+                        <i class="fab fa-paypal"></i>
+                    </a>
+                    <a href="https://bsky.app/profile/thanattsitt.bsky.social" target="_blank" rel="noopener" title="Follow on Bluesky">
+                        <i class="fas fa-cloud"></i>
+                    </a>
+                    <a href="https://rss.com/podcasts/than-podcast-cosmic/" target="_blank" rel="noopener" title="Listen to Podcast">
+                        <i class="fas fa-podcast"></i>
+                    </a>
+                    <a href="https://www.instagram.com/thanattsitt.s/" target="_blank" rel="noopener" title="Follow on Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.threads.net/@thanattsitt.s" target="_blank" rel="noopener" title="Follow on Threads">
+                        <i class="fab fa-threads"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+    
+    <!-- Axios for API requests -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    
+    <!-- Toastify for notifications -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.2/Toastify.min.js" integrity="sha512-E/vaI5ZDoL7MrORhJdHD7QJWf3Nz+Uj6S2Jy8Dsh9+DtsGvMWUgNwQC9xGSzpd0nFyZyoNp1cFRkVQzG1Yqjpw==" crossorigin="anonymous"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
