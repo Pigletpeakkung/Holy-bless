@@ -1,403 +1,1955 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Holy Bless - Your daily source of spiritual wisdom and divine inspiration. Discover sacred quotes from Conversations with God, Seth Speaks, Rumi, Alan Watts, Buddha, and Lao Tzu.">
-    <meta name="keywords" content="spiritual wisdom, daily quotes, inspiration, meditation, consciousness, divine wisdom, conversations with god, seth speaks, rumi, alan watts, buddha, lao tzu">
-    <meta name="author" content="Than Attsitt">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Holy Bless - Divine Wisdom Generator">
-    <meta property="og:description" content="Your daily source of spiritual wisdom and divine inspiration from the greatest spiritual teachers">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pigletpeakkung.github.io/holy-bless-divine-wisdom-generator">
-    <meta property="og:image" content="https://pigletpeakkung.github.io/holy-bless-divine-wisdom-generator/og-image.png">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Holy Bless - Divine Wisdom Generator">
-    <meta name="twitter:description" content="Your daily source of spiritual wisdom and divine inspiration">
-    <meta name="twitter:image" content="https://pigletpeakkung.github.io/holy-bless-divine-wisdom-generator/twitter-image.png">
-    
-    <title>Holy Bless - Divine Wisdom Generator | Sacred Quotes & Spiritual Inspiration</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
-    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="./data/passages.json" as="fetch" crossorigin="anonymous">
-    <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="app.js" as="script">
-    
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
-    
-    <!-- Toastify CSS for Notifications -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/Toastify.min.css" integrity="sha512-maK6ap3cVv6eMSVuYz3EJYqQNFOTpQIuBdqC/2OjLpahUt2qlNVdqoVAcZjOQy5KZKBBjhOYnOIVxaZhIW+Og==" crossorigin="anonymous">
-    
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-    
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "Holy Bless - Divine Wisdom Generator",
-        "description": "Your daily source of spiritual wisdom and divine inspiration",
-        "url": "https://pigletpeakkung.github.io/holy-bless-divine-wisdom-generator",
-        "author": {
-            "@type": "Person",
-            "name": "Than Attsitt"
-        },
-        "applicationCategory": "Lifestyle",
-        "operatingSystem": "Any",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Divine Light - Sacred Wisdom Generator. Receive daily spiritual guidance from masters of consciousness including Conversations with God, Seth Speaks, Rumi, Alan Watts, and more.">
+  <meta name="keywords" content="spiritual wisdom, divine guidance, sacred quotes, meditation, consciousness, enlightenment, daily inspiration">
+  <meta name="author" content="Divine Light Collective">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Divine Light - Sacred Wisdom Generator">
+  <meta property="og:description" content="Receive daily spiritual guidance from masters of consciousness">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630/667eea/ffffff?text=Divine+Light">
+  
+  <title>Divine Light - Sacred Wisdom Generator</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+  
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    :root {
+      /* Enhanced Color Schemes */
+      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --gold-gradient: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);
+      --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+      --cosmic-gradient: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      --aurora-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+      --sunset-gradient: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+      
+      /* Typography */
+      --font-primary: 'Crimson Text', serif;
+      --font-secondary: 'Inter', sans-serif;
+      
+      /* Spacing */
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 1.5rem;
+      --spacing-lg: 2rem;
+      --spacing-xl: 3rem;
+      
+      /* Shadows */
+      --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.1);
+      --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.15);
+      --shadow-strong: 0 15px 35px rgba(0, 0, 0, 0.2);
+      
+      /* Border Radius */
+      --radius-sm: 8px;
+      --radius-md: 15px;
+      --radius-lg: 20px;
+      --radius-xl: 25px;
     }
-    </script>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      background: var(--primary-gradient);
+      min-height: 100vh;
+      color: #333;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow-x: hidden;
+    }
+
+    /* Enhanced Background Animations */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+      animation: backgroundShift 20s ease-in-out infinite;
+    }
+
+    @keyframes backgroundShift {
+      0%, 100% { opacity: 0.3; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.1); }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: var(--spacing-lg);
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Enhanced Header */
+    .header {
+      text-align: center;
+      margin-bottom: var(--spacing-xl);
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .header h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin-bottom: var(--spacing-sm);
+      font-weight: 300;
+      letter-spacing: 2px;
+      animation: titleGlow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes titleGlow {
+      from { text-shadow: 2px 2px 8px rgba(0,0,0,0.3); }
+      to { text-shadow: 2px 2px 8px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.3); }
+    }
+
+    .header p {
+      font-size: 1.2em;
+      opacity: 0.9;
+      font-family: var(--font-secondary);
+      font-weight: 300;
+    }
+
+    .header .subtitle {
+      margin-top: var(--spacing-sm);
+      font-size: 0.9em;
+      opacity: 0.7;
+      font-style: italic;
+    }
+
+    /* Enhanced Controls */
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: var(--spacing-lg);
+      margin-bottom: var(--spacing-xl);
+      flex-wrap: wrap;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-xs);
+    }
+
+    .control-label {
+      color: white;
+      font-size: 0.9em;
+      font-weight: 500;
+      font-family: var(--font-secondary);
+      opacity: 0.9;
+    }
+
+    .theme-selector, .source-filter, .search-input {
+      padding: 12px 20px;
+      border: none;
+      border-radius: var(--radius-xl);
+      background: rgba(255,255,255,0.15);
+      color: white;
+      backdrop-filter: blur(20px);
+      cursor: pointer;
+      font-family: var(--font-secondary);
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255,255,255,0.1);
+      min-width: 150px;
+    }
+
+    .theme-selector:hover, .source-filter:hover, .search-input:hover {
+      background: rgba(255,255,255,0.25);
+      border-color: rgba(255,255,255,0.3);
+      transform: translateY(-2px);
+    }
+
+    .theme-selector:focus, .source-filter:focus, .search-input:focus {
+      outline: none;
+      background: rgba(255,255,255,0.3);
+      border-color: rgba(255,255,255,0.5);
+    }
+
+    .search-input::placeholder {
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* Enhanced Daily Quote */
+    .daily-quote {
+      background: var(--gold-gradient);
+      color: white;
+      padding: var(--spacing-xl);
+      border-radius: var(--radius-lg);
+      margin: var(--spacing-xl) 0;
+      text-align: center;
+      box-shadow: var(--shadow-strong);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .daily-quote::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      animation: shimmer 4s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(180deg); }
+    }
+
+    .daily-quote h3 {
+      font-size: 1.8em;
+      margin-bottom: var(--spacing-md);
+      font-weight: 400;
+      position: relative;
+      z-index: 1;
+    }
+
+    .daily-quote-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Enhanced Stats */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: var(--spacing-lg);
+      margin: var(--spacing-xl) 0;
+    }
+
+    .stat-item {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      padding: var(--spacing-lg);
+      border-radius: var(--radius-md);
+      text-align: center;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .stat-item:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-medium);
+    }
+
+    .stat-number {
+      font-size: 2.5em;
+      font-weight: 600;
+      display: block;
+      font-family: var(--font-secondary);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .stat-label {
+      font-size: 0.9em;
+      opacity: 0.9;
+      font-family: var(--font-secondary);
+    }
+
+    /* Enhanced Cross Button */
+    .cross-button-container {
+      text-align: center;
+      margin: var(--spacing-xl) 0;
+    }
+
+    .cross-button {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      box-shadow: var(--shadow-strong);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: scale(1);
+      overflow: hidden;
+    }
+
+    .cross-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.5) 50%, transparent 70%);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .cross-button:hover::before {
+      transform: translateX(100%);
+    }
+
+    .cross-button:hover {
+      background: linear-gradient(135deg, #e9ecef, #dee2e6);
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .cross-vertical, .cross-horizontal {
+      position: absolute;
+      background: #495057;
+      border-radius: 8px;
+      transition: all 0.4s ease;
+    }
+
+    .cross-vertical {
+      top: 25px;
+      left: 50%;
+      width: 20px;
+      height: 50px;
+      transform: translateX(-50%);
+    }
+
+    .cross-horizontal {
+      top: 50%;
+      left: 25px;
+      width: 50px;
+      height: 20px;
+      transform: translateY(-50%);
+    }
+
+    .cross-button:hover .cross-vertical,
+    .cross-button:hover .cross-horizontal {
+      background: #007bff;
+      box-shadow: 0 0 20px rgba(0, 123, 255, 0.6);
+    }
+
+    .cross-button.active {
+      animation: divineActivation 3s ease-in-out;
+    }
+
+    @keyframes divineActivation {
+      0% { 
+        box-shadow: 0 0 20px #FFD700, 0 0 40px #FFD700, 0 0 60px #FFD700;
+        transform: scale(1.2);
+      }
+      25% { 
+        box-shadow: 0 0 25px #FFA500, 0 0 50px #FFA500, 0 0 75px #FFA500;
+        transform: scale(1.15) rotate(90deg);
+      }
+      50% { 
+        box-shadow: 0 0 30px #FF6347, 0 0 60px #FF6347, 0 0 90px #FF6347;
+        transform: scale(1.1) rotate(180deg);
+      }
+      75% { 
+        box-shadow: 0 0 25px #FF4500, 0 0 50px #FF4500, 0 0 75px #FF4500;
+        transform: scale(1.15) rotate(270deg);
+      }
+      100% { 
+        box-shadow: var(--shadow-strong);
+        transform: scale(1) rotate(360deg);
+      }
+    }
+
+    .cross-button-text {
+      color: white;
+      margin-top: var(--spacing-md);
+      font-style: italic;
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
+
+    .keyboard-hint {
+      margin-top: var(--spacing-sm);
+      font-size: 0.8em;
+      opacity: 0.7;
+      color: white;
+      font-family: var(--font-secondary);
+    }
+
+    /* Enhanced Quote Card */
+    .quote-card {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(30px);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      margin: var(--spacing-xl) 0;
+      box-shadow: var(--shadow-strong);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transform: translateY(30px);
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--primary-gradient);
+    }
+
+    .quote-card.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .quote-text {
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      line-height: 1.7;
+      font-style: italic;
+      color: #2c3e50;
+      margin-bottom: var(--spacing-lg);
+      text-align: center;
+      position: relative;
+    }
+
+    .quote-text::before,
+    .quote-text::after {
+      content: '"';
+      font-size: 3em;
+      color: #bdc3c7;
+      position: absolute;
+      font-family: serif;
+    }
+
+    .quote-text::before {
+      top: -10px;
+      left: -20px;
+    }
+
+    .quote-text::after {
+      bottom: -40px;
+      right: -20px;
+    }
+
+    .quote-source {
+      text-align: center;
+      font-size: 1.1em;
+      color: #7f8c8d;
+      font-weight: 600;
+      margin-bottom: var(--spacing-lg);
+      font-family: var(--font-secondary);
+    }
+
+    .quote-meta {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-sm);
+      margin-bottom: var(--spacing-lg);
+      flex-wrap: wrap;
+    }
+
+    .quote-category {
+      background: var(--primary-gradient);
+      color: white;
+      padding: 4px 12px;
+      border-radius: var(--radius-xl);
+      font-size: 0.8em;
+      font-family: var(--font-secondary);
+    }
+
+    /* Enhanced Action Buttons */
+    .quote-actions {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-md);
+      flex-wrap: wrap;
+      margin-top: var(--spacing-lg);
+    }
+
+    .action-btn {
+      padding: 14px 24px;
+      border: none;
+      border-radius: var(--radius-xl);
+      cursor: pointer;
+      font-size: 0.9em;
+      font-weight: 500;
+      font-family: var(--font-secondary);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .action-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .action-btn:hover::before {
+      left: 100%;
+    }
+
+    .primary-btn {
+      background: var(--primary-gradient);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+    }
+
+    .secondary-btn {
+      background: rgba(255, 255, 255, 0.9);
+      color: #495057;
+      border: 2px solid rgba(102, 126, 234, 0.3);
+    }
+
+    .secondary-btn:hover {
+      background: rgba(102, 126, 234, 0.1);
+      border-color: rgba(102, 126, 234, 0.6);
+      transform: translateY(-2px);
+    }
+
+    .favorite-btn {
+      background: var(--secondary-gradient);
+      color: white;
+    }
+
+    .favorite-btn.favorited {
+      background: linear-gradient(135deg, #e74c3c, #c0392b);
+      animation: heartBeat 0.6s ease;
+    }
+
+    @keyframes heartBeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    /* Enhanced Favorites Section */
+    .favorites-section {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-xl);
+      margin: var(--spacing-xl) 0;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .favorites-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .favorites-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: var(--spacing-lg);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .favorite-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: var(--spacing-lg);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .favorite-item:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .favorite-item-actions {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: var(--spacing-xs);
+    }
+
+    .favorite-action-btn {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .favorite-action-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.1);
+    }
+
+    /* Enhanced Notification System */
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.9);
+      color: white;
+      padding: var(--spacing-md) var(--spacing-lg);
+      border-radius: var(--radius-md);
+      z-index: 1000;
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: var(--shadow-medium);
+      animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      max-width: 300px;
+      font-family: var(--font-secondary);
+    }
+
+    @keyframes slideInRight {
+      from { 
+        transform: translateX(100%); 
+        opacity: 0; 
+      }
+      to { 
+        transform: translateX(0); 
+        opacity: 1; 
+      }
+    }
+
+    @keyframes slideOutRight {
+      from { 
+        transform: translateX(0); 
+        opacity: 1; 
+      }
+      to { 
+        transform: translateX(100%); 
+        opacity: 0; 
+      }
+    }
+
+    /* Enhanced Credit Section */
+    .credit {
+      font-size: 0.9em;
+      color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      margin-top: var(--spacing-xl);
+      padding: var(--spacing-xl);
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: var(--radius-md);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-family: var(--font-secondary);
+    }
+
+    .wisdom-sources {
+      margin-bottom: var(--spacing-md);
+    }
+
+    .source-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--spacing-xs);
+      margin-top: var(--spacing-sm);
+    }
+
+    .source-tag {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.8em;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Loading States */
+    .loading {
+      position: relative;
+      pointer-events: none;
+    }
+
+    .loading::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 20px;
+      margin: -10px 0 0 -10px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-top: 2px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Theme Variations */
+    .theme-ocean {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .theme-sunset {
+      background: var(--sunset-gradient);
+    }
+
+    .theme-forest {
+      background: var(--success-gradient);
+    }
+
+    .theme-cosmic {
+      background: var(--cosmic-gradient);
+    }
+
+    .theme-aurora {
+      background: var(--aurora-gradient);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: var(--spacing-md);
+      }
+      
+      .header h1 {
+        font-size: 2.5rem;
+      }
+      
+      .quote-card {
+        padding: var(--spacing-lg);
+      }
+      
+      .quote-text {
+        font-size: 1.3rem;
+      }
+      
+      .controls {
+        flex-direction: column;
+        gap: var(--spacing-md);
+      }
+      
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+      }
+      
+      .quote-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .action-btn {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+      }
+      
+      .favorites-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .cross-button {
+        width: 80px;
+        height: 80px;
+      }
+      
+      .cross-vertical {
+        width: 16px;
+        height: 40px;
+        top: 20px;
+      }
+      
+      .cross-horizontal {
+        width: 40px;
+        height: 16px;
+        left: 20px;
+      }
+      
+      .notification {
+        right: 10px;
+        left: 10px;
+        max-width: none;
+      }
+    }
+
+    /* Accessibility Improvements */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Focus States */
+    .cross-button:focus,
+    .action-btn:focus,
+    .theme-selector:focus,
+    .source-filter:focus,
+    .search-input:focus {
+      outline: 2px solid rgba(255, 255, 255, 0.8);
+      outline-offset: 2px;
+    }
+
+    /* High Contrast Mode */
+    @media (prefers-contrast: high) {
+      .quote-card {
+        background: rgba(255, 255, 255, 1);
+        border: 2px solid #000;
+      }
+      
+      .action-btn {
+        border: 2px solid currentColor;
+      }
+    }
+  </style>
 </head>
 <body class="theme-ocean">
-    <!-- Loading Screen -->
-    <div id="loadingScreen" class="loading-screen">
-        <div class="loading-content">
-            <div class="loading-spinner">✨</div>
-            <h2>Connecting to Divine Wisdom...</h2>
-            <p>Loading sacred passages from the masters</p>
-        </div>
+  <div class="container">
+    <header class="header">
+      <h1>✨ Divine Light ✨</h1>
+      <p>Sacred wisdom from the masters of consciousness</p>
+      <p class="subtitle">Receive daily guidance from the infinite source of divine knowledge</p>
+    </header>
+
+    <div class="controls">
+      <div class="control-group">
+        <label class="control-label">
+          <i class="fas fa-palette"></i> Theme
+        </label>
+        <select class="theme-selector" id="themeSelector" aria-label="Select theme">
+          <option value="theme-ocean">🌊 Ocean Depths</option>
+          <option value="theme-sunset">🌅 Sunset Glow</option>
+          <option value="theme-forest">🌲 Forest Wisdom</option>
+          <option value="theme-cosmic">🌌 Cosmic Mystery</option>
+          <option value="theme-aurora">🌈 Aurora Dreams</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">
+          <i class="fas fa-book"></i> Source
+        </label>
+        <select class="source-filter" id="sourceFilter" aria-label="Filter by source">
+          <option value="all">All Sources</option>
+          <option value="Alan Watts">Alan Watts</option>
+          <option value="Buddha">Buddha</option>
+          <option value="Lao Tzu">Lao Tzu</option>
+          <option value="Rumi">Rumi</option>
+          <option value="Law of One">Law of One</option>
+          <option value="Emerald Tablet">Emerald Tablet</option>
+          <option value="Conversations with God">Conversations with God</option>
+          <option value="Seth Speaks">Seth Speaks</option>
+          <option value="Florence Scovel Shinn">Florence Scovel Shinn</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">
+          <i class="fas fa-search"></i> Search
+        </label>
+        <input type="text" class="search-input" id="searchInput" placeholder="Search wisdom..." aria-label="Search quotes">
+      </div>
     </div>
 
-    <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <h1 class="display-3">✨ Holy Bless ✨</h1>
-            <p class="lead">Sacred wisdom from the masters of consciousness and divine light</p>
-            <p id="greetingMessage" class="font-weight-light"></p>
-            
-            <!-- Service Status Indicator -->
-            <div id="serviceStatus" class="service-status d-none">
-                <small class="text-muted">
-                    <i id="statusIcon" class="fas fa-circle"></i>
-                    <span id="statusText">Loading...</span>
-                </small>
-            </div>
-        </header>
-
-        <!-- Controls Section -->
-        <section class="controls">
-            <div class="row w-100">
-                <div class="col-lg-3 col-md-6 mb-2">
-                    <label for="themeSelector" class="control-label">
-                        <i class="fas fa-palette"></i> Theme:
-                    </label>
-                    <select class="form-control" id="themeSelector">
-                        <option value="theme-ocean">🌊 Ocean Depths</option>
-                        <option value="theme-sunset">🌅 Sunset Glow</option>
-                        <option value="theme-forest">🌲 Forest Wisdom</option>
-                        <option value="theme-cosmic">🌌 Cosmic Mystery</option>
-                    </select>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-2">
-                    <label for="sourceFilter" class="control-label">
-                        <i class="fas fa-book"></i> Source:
-                    </label>
-                    <select class="form-control" id="sourceFilter">
-                        <option value="">All Sources</option>
-                        <!-- Options will be populated dynamically -->
-                    </select>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-2">
-                    <label for="categoryFilter" class="control-label">
-                        <i class="fas fa-tags"></i> Category:
-                    </label>
-                    <select class="form-control" id="categoryFilter">
-                        <option value="">All Categories</option>
-                        <!-- Options will be populated dynamically -->
-                    </select>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-2">
-                    <label for="searchInput" class="control-label">
-                        <i class="fas fa-search"></i> Search:
-                    </label>
-                    <input type="text" class="form-control" id="searchInput" placeholder="Search wisdom...">
-                </div>
-            </div>
-        </section>
-
-        <!-- Daily Quote Section -->
-        <section class="daily-quote" id="dailyQuote">
-            <div class="quote-header">
-                <h3><i class="fas fa-sun"></i> Today's Sacred Message</h3>
-                <div class="quote-actions">
-                    <button class="btn btn-sm btn-outline-light" id="favoriteBtn" title="Add to favorites">
-                        <i class="far fa-heart"></i>
-                    </button>
-                    <button class="btn btn-sm btn-outline-light" id="shareBtn" title="Share this wisdom">
-                        <i class="fas fa-share-alt"></i>
-                    </button>
-                    <button class="btn btn-sm btn-outline-light" id="copyBtn" title="Copy to clipboard">
-                        <i class="fas fa-copy"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <blockquote id="dailyQuoteContent" class="blockquote text-center">
-                <p id="quoteText">Receiving divine wisdom...</p>
-                <footer id="quoteAuthor" class="blockquote-footer"></footer>
-                <div id="quoteMeta" class="quote-meta d-none">
-                    <span id="quoteCategory" class="badge badge-primary"></span>
-                    <div id="quoteTags" class="quote-tags"></div>
-                </div>
-            </blockquote>
-        </section>
-
-        <!-- Stats Section -->
-        <section class="stats text-center">
-            <h4><i class="fas fa-chart-line"></i> Your Spiritual Journey</h4>
-            <div class="row">
-                <div class="col-lg-2 col-md-4 col-6">
-                    <div class="stat-item">
-                        <span class="stat-number" id="totalQuotes">0</span>
-                        <span><i class="fas fa-star"></i> Total Wisdom</span>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6">
-                    <div class="stat-item">
-                        <span class="stat-number" id="quotesRead">0</span>
-                        <span><i class="fas fa-book-open"></i> Messages Received</span>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6">
-                    <div class="stat-item">
-                        <span class="stat-number" id="favoriteCount">0</span>
-                        <span><i class="fas fa-heart"></i> Favorites</span>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6">
-                    <div class="stat-item">
-                        <span class="stat-number" id="reflectionsCount">0</span>
-                        <span><i class="fas fa-feather-alt"></i> Reflections</span>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6">
-                    <div class="stat-item">
-                        <span class="stat-number" id="availablePassages">86</span>
-                        <span><i class="fas fa-scroll"></i> Available</span>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-6">
-                    <div class="stat-item">
-                        <span class="stat-number" id="daysActive">0</span>
-                        <span><i class="fas fa-calendar-alt"></i> Days Active</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reflection Area -->
-        <section id="reflectionArea" class="reflection-area">
-            <h4><i class="fas fa-feather-alt"></i> Your Sacred Reflections</h4>
-            <div class="reflection-input-group">
-                <textarea 
-                    id="userReflection" 
-                    class="form-control" 
-                    placeholder="What does this wisdom mean to you? How does it resonate with your soul? Share your thoughts and insights..."
-                    rows="4"
-                    aria-label="Write your reflection on the quote"
-                ></textarea>
-                <div class="reflection-actions mt-3">
-                    <button class="btn btn-primary" id="saveReflectionBtn">
-                        <i class="fas fa-save"></i> Save Reflection
-                    </button>
-                    <button class="btn btn-secondary ml-2" id="clearReflectionBtn">
-                        <i class="fas fa-eraser"></i> Clear
-                    </button>
-                    <small class="text-muted ml-3">
-                        <i class="fas fa-info-circle"></i> Auto-saves as you type
-                    </small>
-                </div>
-            </div>
-        </section>
-
-        <!-- Star Button -->
-        <div class="star-button-container text-center">
-            <button 
-                id="starButton" 
-                class="star-button" 
-                aria-label="Receive divine wisdom" 
-                title="Click to receive new wisdom (or press Space)"
-            >
-                <span class="star-icon">🌟</span>
-            </button>
-            <p class="star-button-text">Click the sacred star to receive your divine message</p>
-            <div class="keyboard-shortcuts">
-                <small class="text-muted">
-                    <i class="fas fa-keyboard"></i> 
-                    <kbd>Space</kbd> New wisdom • 
-                    <kbd>Ctrl+S</kbd> Save reflection • 
-                    <kbd>Ctrl+F</kbd> Search • 
-                    <kbd>F</kbd> Favorite
-                </small>
-            </div>
-        </div>
-
-        <!-- Favorites Section (Initially Hidden) -->
-        <section id="favoritesSection" class="favorites-section d-none">
-            <h4><i class="fas fa-heart text-danger"></i> Your Favorite Wisdom</h4>
-            <div id="favoritesList" class="favorites-list">
-                <!-- Favorites will be populated here -->
-            </div>
-            <div class="text-center mt-3">
-                <button class="btn btn-outline-primary" id="toggleFavoritesBtn">
-                    <i class="fas fa-eye-slash"></i> Hide Favorites
-                </button>
-            </div>
-        </section>
-
-        <!-- Quick Actions -->
-        <section class="quick-actions text-center">
-            <h5><i class="fas fa-bolt"></i> Quick Actions</h5>
-            <div class="action-buttons">
-                <button class="btn btn-outline-primary btn-sm" id="showFavoritesBtn">
-                    <i class="fas fa-heart"></i> View Favorites
-                </button>
-                <button class="btn btn-outline-success btn-sm" id="exportDataBtn">
-                    <i class="fas fa-download"></i> Export Data
-                </button>
-                <button class="btn btn-outline-info btn-sm" id="showStatsBtn">
-                    <i class="fas fa-chart-bar"></i> Detailed Stats
-                </button>
-                <button class="btn btn-outline-warning btn-sm" id="randomCategoryBtn">
-                    <i class="fas fa-random"></i> Random Category
-                </button>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="credit text-center">
-            <div class="wisdom-sources mb-3">
-                <p class="mb-2">
-                    <i class="fas fa-book-open text-warning"></i> 
-                    <strong>Sacred Wisdom Sources:</strong>
-                </p>
-                <div class="sources-grid">
-                    <span class="source-badge">Conversations with God</span>
-                    <span class="source-badge">Seth Speaks</span>
-                    <span class="source-badge">Rumi</span>
-                    <span class="source-badge">Alan Watts</span>
-                    <span class="source-badge">Buddha</span>
-                    <span class="source-badge">Lao Tzu</span>
-                </div>
-            </div>
-            
-            <div class="creator-info">
-                <p class="mb-2">
-                    Created with <i class="fas fa-heart text-danger"></i> and divine inspiration by 
-                    <a href="https://github.com/Pigletpeakkung" target="_blank" rel="noopener" class="creator-link">
-                        <strong>Than Attsitt</strong>
-                    </a>
-                </p>
-                
-                <div class="social-links">
-                    <a href="https://paypal.me/@thanattsittS" target="_blank" rel="noopener" title="Support via PayPal" class="social-link">
-                        <i class="fab fa-paypal"></i>
-                    </a>
-                    <a href="https://bsky.app/profile/thanattsitt.bsky.social" target="_blank" rel="noopener" title="Follow on Bluesky" class="social-link">
-                        <i class="fas fa-cloud"></i>
-                    </a>
-                    <a href="https://rss.com/podcasts/than-podcast-cosmic/" target="_blank" rel="noopener" title="Listen to Podcast" class="social-link">
-                        <i class="fas fa-podcast"></i>
-                    </a>
-                    <a href="https://www.instagram.com/thanattsitt.s/" target="_blank" rel="noopener" title="Follow on Instagram" class="social-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.threads.net/@thanattsitt.s" target="_blank" rel="noopener" title="Follow on Threads" class="social-link">
-                        <i class="fab fa-threads"></i>
-                    </a>
-                    <a href="https://github.com/Pigletpeakkung/holy-bless-divine-wisdom-generator" target="_blank" rel="noopener" title="View Source Code" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-                
-                <div class="app-info mt-3">
-                    <small class="text-muted">
-                        <i class="fas fa-code"></i> Open Source • 
-                        <i class="fas fa-mobile-alt"></i> Mobile Friendly • 
-                        <i class="fas fa-wifi"></i> Works Offline • 
-                        <span id="appVersion">v1.0</span>
-                    </small>
-                </div>
-            </div>
-        </footer>
+    <div class="daily-quote" id="dailyQuote">
+      <h3><i class="fas fa-sun"></i> Today's Sacred Message</h3>
+      <div id="dailyQuoteContent" class="daily-quote-content"></div>
     </div>
 
-    <!-- Modal for Detailed Stats -->
-    <div class="modal fade" id="statsModal" tabindex="-1" role="dialog" aria-labelledby="statsModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="statsModalLabel">
-                        <i class="fas fa-chart-bar"></i> Detailed Statistics
-                    </h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id="statsModalBody">
-                    <!-- Stats content will be populated here -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="exportStatsBtn">
-                        <i class="fas fa-download"></i> Export Stats
-                    </button>
-                </div>
-            </div>
-        </div>
+    <div class="stats">
+      <div class="stat-item" title="Total wisdom passages available">
+        <span class="stat-number" id="totalQuotes">0</span>
+        <span class="stat-label"><i class="fas fa-scroll"></i> Total Wisdom</span>
+      </div>
+      <div class="stat-item" title="Messages you've received">
+        <span class="stat-number" id="quotesRead">0</span>
+        <span class="stat-label"><i class="fas fa-book-open"></i> Messages Received</span>
+      </div>
+      <div class="stat-item" title="Your saved favorites">
+        <span class="stat-number" id="favoriteCount">0</span>
+        <span class="stat-label"><i class="fas fa-heart"></i> Favorites Saved</span>
+      </div>
+      <div class="stat-item" title="Days you've visited">
+        <span class="stat-number" id="daysActive">0</span>
+        <span class="stat-label"><i class="fas fa-calendar-alt"></i> Days Active</span>
+      </div>
     </div>
 
-    <!-- Scripts -->
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    
-    <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
-    
-    <!-- Axios for API requests -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    
-    <!-- Toastify for notifications -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/Toastify.min.js" integrity="sha512-wKlHiUBOcJDsBv0oxpCQw6t25ZQSRV8XnyDwTpRmzuJUgOwmqVKABeLUZCZmhyWzQzGogzJqtLvqNpHjOmOtfQ==" crossorigin="anonymous"></script>
-    
-    <!-- Utils -->
-    <script src="src/utils/api.js"></script>
-    <script src="src/utils/storage.js"></script>
-    <script src="src/utils/helpers.js"></script>
-    
-    <!-- Main Application -->
-    <script src="app.js"></script>
+    <div class="cross-button-container">
+      <button id="crossButton" class="cross-button" onclick="generatePassage()" aria-label="Receive divine wisdom">
+        <span class="cross-vertical"></span>
+        <span class="cross-horizontal"></span>
+      </button>
+      <p class="cross-button-text">Click the sacred cross to receive your divine message</p>
+      <p class="keyboard-hint">
+        <i class="fas fa-keyboard"></i> Press <kbd>Space</kbd> for new wisdom • <kbd>F</kbd> to favorite
+      </p>
+    </div>
 
-    <!-- Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('./sw.js')
-                    .then(function(registration) {
-                        console.log('✅ ServiceWorker registration successful');
-                    })
-                    .catch(function(err) {
-                        console.log('❌ ServiceWorker registration failed:', err);
-                    });
-            });
+    <div id="quoteCard" class="quote-card" style="display: none;">
+      <div class="quote-text" id="quoteText"></div>
+      <div class="quote-source" id="quoteSource"></div>
+      <div class="quote-meta" id="quoteMeta" style="display: none;">
+        <span class="quote-category" id="quoteCategory"></span>
+      </div>
+      <div class="quote-actions">
+        <button class="action-btn primary-btn" id="playBtn" title="Listen to this wisdom">
+          <i class="fas fa-volume-up"></i> Listen
+        </button>
+        <button class="action-btn favorite-btn" id="favoriteBtn" title="Save to favorites">
+          <i class="fas fa-heart"></i> Save
+        </button>
+        <button class="action-btn secondary-btn" id="shareBtn" title="Share this wisdom">
+          <i class="fas fa-share-alt"></i> Share
+        </button>
+        <button class="action-btn secondary-btn" id="copyBtn" title="Copy to clipboard">
+          <i class="fas fa-copy"></i> Copy
+        </button>
+      </div>
+    </div>
+
+    <div class="favorites-section" id="favoritesSection" style="display: none;">
+      <div class="favorites-header">
+        <h3><i class="fas fa-heart text-danger"></i> Your Sacred Collection</h3>
+        <button class="action-btn secondary-btn" onclick="exportFavorites()" title="Export your favorites">
+          <i class="fas fa-download"></i> Export
+        </button>
+      </div>
+      <div class="favorites-grid" id="favoritesGrid"></div>
+      <div style="text-align: center;">
+        <button class="action-btn secondary-btn" onclick="toggleFavorites()">
+          <i class="fas fa-eye-slash"></i> Hide Favorites
+        </button>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin: var(--spacing-xl) 0;">
+      <button class="action-btn secondary-btn" onclick="toggleFavorites()" id="showFavoritesBtn">
+        <i class="fas fa-heart"></i> View Saved Favorites (<span id="favoritesCount">0</span>)
+      </button>
+    </div>
+
+    <div class="credit">
+      <div class="wisdom-sources">
+        <p><strong><i class="fas fa-book-open"></i> Sacred Wisdom Sources:</strong></p>
+        <div class="source-tags">
+          <span class="source-tag">Conversations with God</span>
+          <span class="source-tag">Seth Speaks</span>
+          <span class="source-tag">Rumi</span>
+          <span class="source-tag">Alan Watts</span>
+          <span class="source-tag">Florence Scovel Shinn</span>
+          <span class="source-tag">Lao Tzu</span>
+          <span class="source-tag">Law of One</span>
+          <span class="source-tag">Emerald Tablet</span>
+          <span class="source-tag">Buddha</span>
+          <span class="source-tag">Gandhi</span>
+          <span class="source-tag">Einstein</span>
+          <span class="source-tag">Jung</span>
+          <span class="source-tag">Tesla</span>
+        </div>
+      </div>
+      <p style="margin-top: var(--spacing-md);">
+        Created with <i class="fas fa-heart text-danger"></i> and divine inspiration • 
+        <a href="#" style="color: rgba(255,255,255,0.9);">Open Source</a> • 
+        <span id="appVersion">v2.0</span>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Enhanced passages array with all your quotes plus additional metadata
+    let passages = [
+      // Conversations with God
+      { text: "There is no such thing as 'wrong,' only what does not serve you. You cannot make a mistake, you can only make a choice.", id: 1, source: "Conversations with God", category: "choice", tags: ["wisdom", "choice", "growth"] },
+      { text: "The purpose of life is to know yourself, create yourself, and experience yourself as Who You Really Are.", id: 2, source: "Conversations with God", category: "purpose", tags: ["self-discovery", "purpose", "identity"] },
+      { text: "Life is an ongoing process of creation. You are creating your reality with every thought, word, and action.", id: 3, source: "Conversations with God", category: "creation", tags: ["reality", "creation", "manifestation"] },
+      { text: "Fear is the opposite of love. Every thought, word, or deed is founded in one or the other.", id: 4, source: "Conversations with God", category: "love", tags: ["love", "fear", "consciousness"] },
+      { text: "You are not here to learn lessons; you are here to remember who you are.", id: 5, source: "Conversations with God", category: "remembering", tags: ["identity", "awakening", "truth"] },
+      { text: "The highest purpose of any soul is to be fully self-expressed in its divinity.", id: 6, source: "Conversations with God", category: "purpose", tags: ["divinity", "expression", "soul"] },
+      { text: "God is not a singular super-being, but the energy of life, and you are part of it.", id: 7, source: "Conversations with God", category: "divinity", tags: ["god", "energy", "unity"] },
+
+      // Seth Speaks
+      { text: "You create your own reality. There are no limitations to the self except those you believe in.", id: 8, source: "Seth Speaks", category: "reality", tags: ["reality", "beliefs", "limitations"] },
+      { text: "The universe is a multidimensional school, and you are here to learn and explore your own consciousness.", id: 9, source: "Seth Speaks", category: "consciousness", tags: ["universe", "learning", "consciousness"] },
+      { text: "Your beliefs form your experience, as surely as clay shapes a pot.", id: 10, source: "Seth Speaks", category: "beliefs", tags: ["beliefs", "experience", "creation"] },
+      { text: "There is no separation between you and All That Is; you are an eternal portion of it.", id: 11, source: "Seth Speaks", category: "unity", tags: ["unity", "eternal", "connection"] },
+      { text: "The present is the point of power, where all realities intersect.", id: 12, source: "Seth Speaks", category: "present", tags: ["present", "power", "reality"] },
+      { text: "Your inner self knows its purpose, and it guides you through every moment.", id: 13, source: "Seth Speaks", category: "guidance", tags: ["inner-self", "purpose", "guidance"] },
+      { text: "Consciousness creates form, not the other way around.", id: 14, source: "Seth Speaks", category: "consciousness", tags: ["consciousness", "form", "creation"] },
+
+      // Rumi
+      { text: "Out beyond ideas of wrongdoing and rightdoing, there is a field. I'll meet you there.", id: 15, source: "Rumi", category: "transcendence", tags: ["transcendence", "unity", "beyond"] },
+      { text: "The wound is the place where the Light enters you.", id: 16, source: "Rumi", category: "healing", tags: ["healing", "light", "transformation"] },
+      { text: "Do not feel lonely, the entire universe is inside you.", id: 17, source: "Rumi", category: "unity", tags: ["universe", "inner-world", "connection"] },
+      { text: "Let the beauty we love be what we do.", id: 18, source: "Rumi", category: "beauty", tags: ["beauty", "love", "action"] },
+      { text: "What you seek is seeking you.", id: 19, source: "Rumi", category: "seeking", tags: ["seeking", "attraction", "destiny"] },
+      { text: "Stop acting so small. You are the universe in ecstatic motion.", id: 20, source: "Rumi", category: "expansion", tags: ["expansion", "universe", "ecstasy"] },
+      { text: "The heart has its own language; the heart knows a hundred thousand ways to speak.", id: 21, source: "Rumi", category: "heart", tags: ["heart", "language", "communication"] },
+
+      // Alan Watts (Extended)
+      { text: "You are the universe experiencing itself.", id: 22, source: "Alan Watts", category: "consciousness", tags: ["universe", "experience", "consciousness"] },
+      { text: "The only way to make sense out of change is to plunge into it, move with it, and join the dance.", id: 23, source: "Alan Watts", category: "change", tags: ["change", "flow", "dance"] },
+      { text: "Trying to define yourself is like trying to bite your own teeth.", id: 24, source: "Alan Watts", category: "identity", tags: ["identity", "paradox", "self"] },
+      { text: "The meaning of life is just to be alive. It is so plain and so obvious and so simple.", id: 25, source: "Alan Watts", category: "life", tags: ["life", "meaning", "simplicity"] },
+      { text: "You don't look out there for God, something in the sky; you look in here.", id: 26, source: "Alan Watts", category: "divinity", tags: ["god", "inner", "seeking"] },
+      { text: "Life is not a problem to be solved, but a reality to be experienced.", id: 27, source: "Alan Watts", category: "experience", tags: ["life", "experience", "reality"] },
+      { text: "To have faith is to trust yourself to the water. You don't grab hold of it; you let it carry you.", id: 28, source: "Alan Watts", category: "faith", tags: ["faith", "trust", "flow"] },
+      { text: "The more a thing tends to be permanent, the more it tends to be lifeless.", id: 50, source: "Alan Watts", category: "impermanence", tags: ["impermanence", "life", "change"] },
+      { text: "We do not 'come into' this world; we come out of it, as leaves from a tree.", id: 51, source: "Alan Watts", category: "nature", tags: ["nature", "belonging", "emergence"] },
+      { text: "No one is more dangerously insane than one who is sane all the time.", id: 52, source: "Alan Watts", category: "sanity", tags: ["sanity", "balance", "wisdom"] },
+      { text: "Muddy water is best cleared by leaving it alone.", id: 53, source: "Alan Watts", category: "clarity", tags: ["clarity", "patience", "non-action"] },
+      { text: "The ego is nothing other than the focus of conscious attention.", id: 54, source: "Alan Watts", category: "ego", tags: ["ego", "attention", "consciousness"] },
+      { text: "You are under no obligation to be the same person you were five minutes ago.", id: 55, source: "Alan Watts", category: "change", tags: ["change", "identity", "freedom"] },
+      { text: "Problems that remain persistently insoluble should always be suspected as questions asked in the wrong way.", id: 56, source: "Alan Watts", category: "problems", tags: ["problems", "questions", "perspective"] },
+      { text: "The art of living is neither careless drifting nor fearful clinging, but a dance.", id: 57, source: "Alan Watts", category: "living", tags: ["living", "balance", "dance"] },
+      { text: "What you are basically, deep deep down, is simply the fabric and structure of existence itself.", id: 58, source: "Alan Watts", category: "existence", tags: ["existence", "essence", "reality"] },
+
+      // Florence Scovel Shinn
+      { text: "The game of life is a game of boomerangs. Our thoughts, deeds, and words return to us sooner or later with astounding accuracy.", id: 29, source: "Florence Scovel Shinn", category: "karma", tags: ["karma", "thoughts", "return"] },
+      { text: "Every great work, every big accomplishment, has been brought into manifestation through holding to the vision.", id: 30, source: "Florence Scovel Shinn", category: "vision", tags: ["vision", "manifestation", "accomplishment"] },
+      { text: "Your word is your wand. The words you speak create your own destiny.", id: 31, source: "Florence Scovel Shinn", category: "words", tags: ["words", "creation", "destiny"] },
+      { text: "There is no loss in divine mind; therefore, I cannot lose anything that is rightfully mine.", id: 32, source: "Florence Scovel Shinn", category: "abundance", tags: ["abundance", "divine", "security"] },
+      { text: "Faith is an active force, a power that moves mountains.", id: 33, source: "Florence Scovel Shinn", category: "faith", tags: ["faith", "power", "mountains"] },
+      { text: "The Divine Plan unfolds through your trust and inspired action.", id: 34, source: "Florence Scovel Shinn", category: "divine-plan", tags: ["divine-plan", "trust", "action"] },
+      { text: "Intuition is the voice of God within, guiding you to your good.", id: 35, source: "Florence Scovel Shinn", category: "intuition", tags: ["intuition", "god", "guidance"] },
+
+      // Buddhist Teachings (Extended)
+      { text: "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.", id: 61, source: "Buddha", category: "present", tags: ["present", "mindfulness", "concentration"] },
+      { text: "Peace comes from within. Do not seek it without.", id: 62, source: "Buddha", category: "peace", tags: ["peace", "inner", "seeking"] },
+      { text: "Holding onto anger is like drinking poison and expecting the other person to die.", id: 63, source: "Buddhist proverb", category: "anger", tags: ["anger", "poison", "release"] },
+      { text: "Thousands of candles can be lit from a single candle, and the life of the candle will not be shortened.", id: 64, source: "Buddha", category: "sharing", tags: ["sharing", "light", "abundance"] },
+      { text: "You yourself, as much as anybody in the entire universe, deserve your love and affection.", id: 65, source: "Buddha", category: "self-love", tags: ["self-love", "compassion", "worth"] },
+      { text: "In the end, only three things matter: how much you loved, how gently you lived, and how gracefully you let go.", id: 66, source: "Buddhist saying", category: "life", tags: ["love", "gentleness", "letting-go"] },
+      { text: "The root of suffering is attachment.", id: 67, source: "Buddha", category: "suffering", tags: ["suffering", "attachment", "freedom"] },
+      { text: "There is no path to happiness: happiness is the path.", id: 68, source: "Buddha", category: "happiness", tags: ["happiness", "path", "journey"] },
+      { text: "All that we are is the result of what we have thought.", id: 69, source: "Buddha", category: "thoughts", tags: ["thoughts", "creation", "mind"] },
+      { text: "Better than a thousand hollow words is one word that brings peace.", id: 70, source: "Buddha", category: "words", tags: ["words", "peace", "meaning"] },
+      { text: "Just as a snake sheds its skin, we must shed our past over and over again.", id: 71, source: "Buddha", category: "transformation", tags: ["transformation", "past", "renewal"] },
+      { text: "The mind is everything. What you think you become.", id: 72, source: "Buddha", category: "mind", tags: ["mind", "thoughts", "becoming"] },
+      { text: "To understand everything is to forgive everything.", id: 73, source: "Buddha", category: "forgiveness", tags: ["understanding", "forgiveness", "compassion"] },
+      { text: "No one saves us but ourselves. No one can and no one may. We ourselves must walk the path.", id: 74, source: "Buddha", category: "self-reliance", tags: ["self-reliance", "path", "responsibility"] },
+      { text: "Work out your own salvation. Do not depend on others.", id: 75, source: "Buddha", category: "independence", tags: ["salvation", "independence", "self-work"] },
+
+      // Tao Te Ching (Extended)
+      { text: "The Tao that can be told is not the eternal Tao.", id: 76, source: "Lao Tzu, Tao Te Ching", category: "mystery", tags: ["tao", "mystery", "ineffable"] },
+      { text: "Nature does not hurry, yet everything is accomplished.", id: 77, source: "Lao Tzu, Tao Te Ching", category: "patience", tags: ["nature", "patience", "timing"] },
+      { text: "When I let go of what I am, I become what I might be.", id: 78, source: "Lao Tzu, Tao Te Ching", category: "letting-go", tags: ["letting-go", "potential", "becoming"] },
+      { text: "A good traveler has no fixed plans and is not intent on arriving.", id: 79, source: "Lao Tzu, Tao Te Ching", category: "journey", tags: ["journey", "flexibility", "presence"] },
+      { text: "Knowing others is intelligence; knowing yourself is true wisdom.", id: 80, source: "Lao Tzu, Tao Te Ching", category: "wisdom", tags: ["wisdom", "self-knowledge", "intelligence"] },
+      { text: "The soft overcomes the hard; the gentle overcomes the rigid.", id: 81, source: "Lao Tzu, Tao Te Ching", category: "gentleness", tags: ["gentleness", "strength", "flexibility"] },
+      { text: "He who knows he has enough is rich.", id: 82, source: "Lao Tzu, Tao Te Ching", category: "contentment", tags: ["contentment", "wealth", "enough"] },
+      { text: "The journey of a thousand miles begins with one step.", id: 83, source: "Lao Tzu, Tao Te Ching", category: "beginning", tags: ["beginning", "journey", "action"] },
+      { text: "When you realize there is nothing lacking, the whole world belongs to you.", id: 84, source: "Lao Tzu, Tao Te Ching", category: "completeness", tags: ["completeness", "abundance", "realization"] },
+      { text: "Silence is a source of great strength.", id: 85, source: "Lao Tzu, Tao Te Ching", category: "silence", tags: ["silence", "strength", "power"] },
+      { text: "Be content with what you have; rejoice in the way things are.", id: 86, source: "Lao Tzu, Tao Te Ching", category: "contentment", tags: ["contentment", "acceptance", "joy"] },
+      { text: "To the mind that is still, the whole universe surrenders.", id: 87, source: "Lao Tzu, Tao Te Ching", category: "stillness", tags: ["stillness", "mind", "universe"] },
+      { text: "Health is the greatest possession. Contentment is the greatest treasure.", id: 88, source: "Lao Tzu, Tao Te Ching", category: "health", tags: ["health", "contentment", "treasure"] },
+      { text: "Respond intelligently even to unintelligent treatment.", id: 89, source: "Lao Tzu, Tao Te Ching", category: "wisdom", tags: ["wisdom", "response", "intelligence"] },
+      { text: "New beginnings are often disguised as painful endings.", id: 90, source: "Lao Tzu, Tao Te Ching", category: "beginnings", tags: ["beginnings", "endings", "transformation"] },
+
+      // Law of One (Extended)
+      { text: "All is one. There is no polarity, no right or wrong, no disharmony, but only identity.", id: 91, source: "Law of One", category: "unity", tags: ["unity", "oneness", "identity"] },
+      { text: "The universe is one being. When you harm another, you harm yourself.", id: 92, source: "Law of One", category: "unity", tags: ["unity", "harm", "self"] },
+      { text: "Service to others is the path to unity with the Infinite.", id: 93, source: "Law of One", category: "service", tags: ["service", "unity", "infinite"] },
+      { text: "The Creator is not separate from the creation; it is the creation.", id: 94, source: "Law of One", category: "creation", tags: ["creator", "creation", "unity"] },
+      { text: "Love is the vibration which creates, builds, and maintains all things.", id: 95, source: "Law of One", category: "love", tags: ["love", "vibration", "creation"] },
+      { text: "The purpose of incarnation is to learn the ways of love.", id: 96, source: "Law of One", category: "incarnation", tags: ["incarnation", "love", "learning"] },
+      { text: "There is no right or wrong. There is no polarity for all will be reconciled in time.", id: 97, source: "Law of One", category: "reconciliation", tags: ["reconciliation", "polarity", "time"] },
+      { text: "The heart of spiritual evolution is understanding that all beings are the Creator.", id: 98, source: "Law of One", category: "evolution", tags: ["evolution", "beings", "creator"] },
+      { text: "The path back to the One is through love, understanding and acceptance.", id: 99, source: "Law of One", category: "path", tags: ["path", "love", "understanding"] },
+      { text: "Each entity contains all of creation within its consciousness.", id: 100, source: "Law of One", category: "consciousness", tags: ["consciousness", "creation", "entity"] },
+      { text: "The present moment contains all that there is.", id: 101, source: "Law of One", category: "present", tags: ["present", "moment", "all"] },
+      { text: "The greatest service is to be and to allow others to be.", id: 102, source: "Law of One", category: "service", tags: ["service", "being", "allowing"] },
+      { text: "All things, all of life, all of the creation is part of one original thought.", id: 103, source: "Law of One", category: "thought", tags: ["thought", "life", "creation"] },
+      { text: "The purpose of the illusion is that the Creator may know Itself.", id: 104, source: "Law of One", category: "illusion", tags: ["illusion", "creator", "knowing"] },
+      { text: "The energy of the Creator is love/light, light/love.", id: 105, source: "Law of One", category: "energy", tags: ["energy", "love", "light"] },
+
+      // Emerald Tablet (Extended)
+      { text: "As above, so below; as below, so above.", id: 116, source: "Emerald Tablet", category: "correspondence", tags: ["correspondence", "above", "below"] },
+      { text: "That which is below is like that which is above, and that which is above is like that which is below, to accomplish the miracles of one thing.", id: 117, source: "Emerald Tablet", category: "correspondence", tags: ["correspondence", "miracles", "unity"] },
+      { text: "The Sun is its father, the Moon its mother, the Wind carries it in its belly, the Earth is its nurse.", id: 118, source: "Emerald Tablet", category: "elements", tags: ["elements", "sun", "moon"] },
+      { text: "All things are born from this one thing by adaptation.", id: 119, source: "Emerald Tablet", category: "adaptation", tags: ["adaptation", "birth", "unity"] },
+      { text: "The universe is mental, held in the mind of the All.", id: 107, source: "Emerald Tablet", category: "mental", tags: ["mental", "universe", "mind"] },
+      { text: "Separate the earth from the fire, the subtle from the gross, gently and with great care.", id: 120, source: "Emerald Tablet", category: "separation", tags: ["separation", "elements", "care"] },
+      { text: "Its power is complete when it is turned to earth.", id: 121, source: "Emerald Tablet", category: "power", tags: ["power", "earth", "completion"] },
+
+      // Additional Wisdom
+      { text: "Be the change you wish to see in the world.", id: 108, source: "Mahatma Gandhi", category: "change", tags: ["change", "world", "action"] },
+      { text: "What we think, we become.", id: 109, source: "Mahatma Gandhi", category: "thoughts", tags: ["thoughts", "becoming", "mind"] },
+      { text: "The only real valuable thing is intuition.", id: 110, source: "Albert Einstein", category: "intuition", tags: ["intuition", "value", "real"] },
+      { text: "Everything is energy and that's all there is to it.", id: 111, source: "Albert Einstein", category: "energy", tags: ["energy", "everything", "reality"] },
+      { text: "The privilege of a lifetime is to become who you truly are.", id: 112, source: "Carl Jung", category: "authenticity", tags: ["authenticity", "lifetime", "true-self"] },
+      { text: "Your vision will become clear only when you can look into your own heart.", id: 113, source: "Carl Jung", category: "vision", tags: ["vision", "heart", "clarity"] },
+      { text: "We are not human beings having a spiritual experience. We are spiritual beings having a human experience.", id: 114, source: "Pierre Teilhard de Chardin", category: "spirituality", tags: ["spirituality", "human", "experience"] },
+      { text: "The day science begins to study non-physical phenomena, it will make more progress in one decade than in all the previous centuries.", id: 115, source: "Nikola Tesla", category: "science", tags: ["science", "non-physical", "progress"] }
+    ];
+
+    // Enhanced state management with more sophisticated tracking
+    let appState = {
+      usedPassages: JSON.parse(localStorage.getItem('usedPassages')) || [],
+      favorites: JSON.parse(localStorage.getItem('favorites')) || [],
+      quotesRead: parseInt(localStorage.getItem('quotesRead')) || 0,
+      daysActive: parseInt(localStorage.getItem('daysActive')) || 0,
+      firstVisit: localStorage.getItem('firstVisit') || new Date().toISOString(),
+      lastVisit: localStorage.getItem('lastVisit') || null,
+      currentQuote: null,
+      isGenerating: false,
+      voicesLoaded: false,
+      searchTimeout: null
+    };
+
+    // Initialize voices for text-to-speech
+    window.speechSynthesis.onvoiceschanged = () => {
+      appState.voicesLoaded = true;
+    };
+
+    // Enhanced theme management with smooth transitions
+    function setTheme(theme) {
+      document.body.style.transition = 'background 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+      document.body.className = theme;
+      localStorage.setItem('selectedTheme', theme);
+      
+      // Add theme-specific enhancements
+      setTimeout(() => {
+        document.body.style.transition = '';
+      }, 800);
+    }
+
+    // Enhanced daily quote with better persistence
+    function getDailyQuote() {
+      const today = new Date().toDateString();
+      const stored = localStorage.getItem('dailyQuote');
+      
+      if (stored) {
+        const dailyData = JSON.parse(stored);
+        if (dailyData.date === today) {
+          return dailyData.quote;
         }
-    </script>
+      }
+      
+      // Generate consistent daily quote using date-based seed
+      const dateHash = today.split('').reduce((a, b) => {
+        a = ((a << 5) - a) + b.charCodeAt(0);
+        return a & a;
+      }, 0);
+      
+      const index = Math.abs(dateHash) % passages.length;
+      const dailyQuote = passages[index];
+      
+      localStorage.setItem('dailyQuote', JSON.stringify({
+        date: today,
+        quote: dailyQuote
+      }));
+      
+      return dailyQuote;
+    }
+
+    // Enhanced daily quote display with animations
+    function displayDailyQuote() {
+      const dailyQuote = getDailyQuote();
+      const content = document.getElementById('dailyQuoteContent');
+      
+      content.innerHTML = `
+        <p style="font-style: italic; font-size: 1.2em; margin-bottom: 15px; line-height: 1.6;">
+          "${dailyQuote.text}"
+        </p>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">
+          <small style="opacity: 0.9;">— ${dailyQuote.source}</small>
+          ${dailyQuote.category ? `<span class="quote-category" style="font-size: 0.7em;">${dailyQuote.category.toUpperCase()}</span>` : ''}
+        </div>
+      `;
+      
+      // Add entrance animation
+      content.style.opacity = '0';
+      content.style.transform = 'translateY(20px)';
+      setTimeout(() => {
+        content.style.transition = 'all 0.6s ease';
+        content.style.opacity = '1';
+        content.style.transform = 'translateY(0)';
+      }, 100);
+    }
+
+    // Enhanced statistics with better tracking
+    function updateStats() {
+      // Update days active
+      const today = new Date().toDateString();
+      const lastVisit = appState.lastVisit;
+      
+      if (!lastVisit || new Date(lastVisit).toDateString() !== today) {
+        if (lastVisit) {
+          appState.daysActive += 1;
+        } else {
+          appState.daysActive = 1;
+        }
+        appState.lastVisit = new Date().toISOString();
+        localStorage.setItem('daysActive', appState.daysActive.toString());
+        localStorage.setItem('lastVisit', appState.lastVisit);
+      }
+      
+      // Update display with animations
+      const stats = {
+        totalQuotes: passages.length,
+        quotesRead: appState.quotesRead,
+        favoriteCount: appState.favorites.length,
+        daysActive: appState.daysActive
+      };
+      
+      Object.entries(stats).forEach(([key, value]) => {
+        const element = document.getElementById(key);
+        if (element && element.textContent !== value.toString()) {
+          animateNumber(element, parseInt(element.textContent) || 0, value);
+        }
+      });
+      
+      // Update favorites count in button
+      const favoritesCount = document.getElementById('favoritesCount');
+      if (favoritesCount) {
+        favoritesCount.textContent = appState.favorites.length;
+      }
+    }
+
+    // Animate number changes
+    function animateNumber(element, from, to) {
+      const duration = 800;
+      const steps = 20;
+      const stepValue = (to - from) / steps;
+      const stepDuration = duration / steps;
+      let current = from;
+      
+      const timer = setInterval(() => {
+        current += stepValue;
+        if ((stepValue > 0 && current >= to) || (stepValue < 0 && current <= to)) {
+          current = to;
+          clearInterval(timer);
+        }
+        element.textContent = Math.round(current);
+      }, stepDuration);
+    }
+
+    // Enhanced audio generation with better voice selection
+    function generateAudio(text, autoPlay = false) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US';
+      utterance.pitch = 0.8;
+      utterance.rate = 0.85;
+      utterance.volume = 0.9;
+
+      if (appState.voicesLoaded) {
+        const voices = window.speechSynthesis.getVoices();
+        const preferredVoice = voices.find(voice => 
+          voice.name.includes('Google') || 
+          voice.name.includes('Microsoft') ||
+          (voice.lang === 'en-US' && voice.name.includes('Female'))
+        ) || voices.find(voice => voice.lang === 'en-US');
+        
+        if (preferredVoice) {
+          utterance.voice = preferredVoice;
+        }
+      }
+
+      if (autoPlay) {
+        // Stop any current speech
+        window.speechSynthesis.cancel();
+        setTimeout(() => {
+          window.speechSynthesis.speak(utterance);
+        }, 100);
+      }
+
+      return utterance;
+    }
+
+    // Enhanced favorites management with better UX
+    function toggleFavorite(quote) {
+      const existingIndex = appState.favorites.findIndex(fav => fav.id === quote.id);
+      
+      if (existingIndex === -1) {
+        appState.favorites.push({
+          ...quote,
+          savedAt: new Date().toISOString()
+        });
+        showNotification('✨ Added to your sacred collection!', 'success');
+        
+        // Add heart animation
+        const favoriteBtn = document.getElementById('favoriteBtn');
+        favoriteBtn.style.animation = 'heartBeat 0.6s ease';
+        setTimeout(() => {
+          favoriteBtn.style.animation = '';
+        }, 600);
+      } else {
+        appState.favorites.splice(existingIndex, 1);
+        showNotification('💔 Removed from favorites', 'info');
+      }
+      
+      localStorage.setItem('favorites', JSON.stringify(appState.favorites));
+      updateFavoriteButton();
+      updateStats();
+      
+      // Update favorites display if visible
+      const favoritesSection = document.getElementById('favoritesSection');
+      if (favoritesSection.style.display !== 'none') {
+        displayFavorites();
+      }
+    }
+
+    function updateFavoriteButton() {
+      const favoriteBtn = document.getElementById('favoriteBtn');
+      if (favoriteBtn && appState.currentQuote) {
+        const isFavorited = appState.favorites.some(fav => fav.id === appState.currentQuote.id);
+        favoriteBtn.innerHTML = isFavorited ? 
+          '<i class="fas fa-heart"></i> Saved' : 
+          '<i class="fas fa-heart"></i> Save';
+        favoriteBtn.classList.toggle('favorited', isFavorited);
+      }
+    }
+
+    // Enhanced favorites display with better layout
+    function displayFavorites() {
+      const favoritesGrid = document.getElementById('favoritesGrid');
+      favoritesGrid.innerHTML = '';
+      
+      if (appState.favorites.length === 0) {
+        favoritesGrid.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 40px; opacity: 0.8;">
+            <i class="fas fa-heart" style="font-size: 3em; margin-bottom: 20px; opacity: 0.5;"></i>
+            <p style="font-size: 1.1em; margin-bottom: 10px;">No favorites saved yet</p>
+            <p style="font-size: 0.9em;">Click the heart on quotes that resonate with your soul!</p>
+          </div>
+        `;
+        return;
+      }
+      
+      appState.favorites.forEach((quote, index) => {
+        const favoriteItem = document.createElement('div');
+        favoriteItem.className = 'favorite-item';
+        favoriteItem.style.animationDelay = `${index * 0.1}s`;
+        favoriteItem.innerHTML = `
+          <div class="favorite-item-actions">
+            <button class="favorite-action-btn" onclick="copyQuote(${JSON.stringify(quote).replace(/"/g, '&quot;')})" title="Copy quote">
+              <i class="fas fa-copy"></i>
+            </button>
+            <button class="favorite-action-btn" onclick="removeFavorite(${quote.id})" title="Remove from favorites">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+          <p style="font-style: italic; margin-bottom: 15px; line-height: 1.6; padding-right: 80px;">
+            "${quote.text}"
+          </p>
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+            <small style="opacity: 0.8;">— ${quote.source}</small>
+            ${quote.category ? `<span class="quote-category" style="font-size: 0.7em;">${quote.category.toUpperCase()}</span>` : ''}
+          </div>
+          ${quote.savedAt ? `<small style="opacity: 0.6; font-size: 0.8em; margin-top: 10px; display: block;">Saved ${new Date(quote.savedAt).toLocaleDateString()}</small>` : ''}
+        `;
+        favoritesGrid.appendChild(favoriteItem);
+      });
+    }
+
+    function removeFavorite(id) {
+      appState.favorites = appState.favorites.filter(fav => fav.id !== id);
+      localStorage.setItem('favorites', JSON.stringify(appState.favorites));
+      displayFavorites();
+      updateStats();
+      updateFavoriteButton();
+      showNotification('🗑️ Favorite removed', 'info');
+    }
+
+    function toggleFavorites() {
+      const favoritesSection = document.getElementById('favoritesSection');
+      const showBtn = document.getElementById('showFavoritesBtn');
+      const isVisible = favoritesSection.style.display !== 'none';
+      
+      if (isVisible) {
+        favoritesSection.style.display = 'none';
+        showBtn.innerHTML = `<i class="fas fa-heart"></i> View Saved Favorites (<span id="favoritesCount">${appState.favorites.length}</span>)`;
+      } else {
+        favoritesSection.style.display = 'block';
+        displayFavorites();
+        showBtn.innerHTML = `<i class="fas fa-eye-slash"></i> Hide Favorites`;
+        
+        // Scroll to favorites section
+        favoritesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // Export favorites functionality
+    function exportFavorites() {
+      if (appState.favorites.length === 0) {
+        showNotification('📭 No favorites to export', 'warning');
+        return;
+      }
+      
+      const exportData = {
+        exportDate: new Date().toISOString(),
+        totalFavorites: appState.favorites.length,
+        favorites: appState.favorites
+      };
+      
+      const dataStr = JSON.stringify(exportData, null, 2);
+      const dataBlob = new Blob([dataStr], { type: 'application/json' });
+      const url = URL.createObjectURL(dataBlob);
+      
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `divine-light-favorites-${new Date().toISOString().split('T')[0]}.json`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      
+      showNotification('📥 Favorites exported successfully!', 'success');
+    }
+
+    // Enhanced search functionality
+    function setupSearch() {
+      const searchInput = document.getElementById('searchInput');
+      
+      searchInput.addEventListener('input', (e) => {
+        clearTimeout(appState.searchTimeout);
+        const query = e.target.value.trim().toLowerCase();
+        
+        if (query.length < 2) return;
+        
+        appState.searchTimeout = setTimeout(() => {
+          searchPassages(query);
+        }, 500);
+      });
+      
+      searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          clearTimeout(appState.searchTimeout);
+          const query = e.target.value.trim().toLowerCase();
+          if (query.length >= 2) {
+            searchPassages(query);
+          }
+        }
+      });
+    }
+
+    function searchPassages(query) {
+      const results = passages.filter(passage => 
+        passage.text.toLowerCase().includes(query) ||
+        passage.source.toLowerCase().includes(query) ||
+        (passage.category && passage.category.toLowerCase().includes(query)) ||
+        (passage.tags && passage.tags.some(tag => tag.toLowerCase().includes(query)))
+      );
+      
+      if (results.length > 0) {
+        const randomResult = results[Math.floor(Math.random() * results.length)];
+        displayQuote(randomResult);
+        showNotification(`🔍 Found ${results.length} matching wisdom${results.length > 1 ? 's' : ''}`, 'info');
+      } else {
+        showNotification('🤷‍♀️ No wisdom found matching your search', 'warning');
+      }
+    }
+
+    // Enhanced quote generation with better filtering and animations
+    function generatePassage() {
+      if (appState.isGenerating) return;
+      
+      appState.isGenerating = true;
+      const button = document.getElementById('crossButton');
+      button.classList.add('active');
+      
+      // Add loading state
+      button.classList.add('loading');
+      
+      setTimeout(() => {
+        try {
+          // Get filtered passages
+          const sourceFilter = document.getElementById('sourceFilter').value;
+          let availablePassages = passages;
+          
+          if (sourceFilter !== 'all') {
+            availablePassages = passages.filter(p => p.source.includes(sourceFilter));
+          }
+          
+          // Filter out recently used passages (last 10)
+          const recentlyUsed = appState.usedPassages.slice(-10);
+          availablePassages = availablePassages.filter(p => !recentlyUsed.includes(p.id));
+
+          // If no available passages, reset used list
+          if (availablePassages.length === 0) {
+            appState.usedPassages = [];
+            availablePassages = sourceFilter === 'all' ? passages : passages.filter(p => p.source.includes(sourceFilter));
+          }
+
+          // Select random passage
+          const randomPassage = availablePassages[Math.floor(Math.random() * availablePassages.length)];
+          
+          // Update tracking
+          appState.usedPassages.push(randomPassage.id);
+          if (appState.usedPassages.length > 50) {
+            appState.usedPassages = appState.usedPassages.slice(-25); // Keep last 25
+          }
+          localStorage.setItem('usedPassages', JSON.stringify(appState.usedPassages));
+          
+          // Update read count
+          appState.quotesRead++;
+          localStorage.setItem('quotesRead', appState.quotesRead.toString());
+          
+          appState.currentQuote = randomPassage;
+          displayQuote(randomPassage);
+          updateStats();
+          
+        } catch (error) {
+          console.error('Error generating passage:', error);
+          showNotification('⚠️ Error generating wisdom. Please try again.', 'error');
+        } finally {
+          button.classList.remove('active', 'loading');
+          appState.isGenerating = false;
+        }
+      }, 2000); // Longer animation for better UX
+    }
+
+    // Enhanced quote display with better animations and metadata
+    function displayQuote(quote) {
+      const quoteCard = document.getElementById('quoteCard');
+      const quoteText = document.getElementById('quoteText');
+      const quoteSource = document.getElementById('quoteSource');
+      const quoteMeta = document.getElementById('quoteMeta');
+      const quoteCategory = document.getElementById('quoteCategory');
+      
+      // Hide card first
+      quoteCard.classList.remove('show');
+      
+      setTimeout(() => {
+        quoteText.textContent = quote.text;
+        quoteSource.textContent = `— ${quote.source}`;
+        
+        // Show metadata if available
+        if (quote.category) {
+          quoteCategory.textContent = quote.category.replace('-', ' ').toUpperCase();
+          quoteMeta.style.display = 'flex';
+        } else {
+          quoteMeta.style.display = 'none';
+        }
+        
+        quoteCard.style.display = 'block';
+        
+        setTimeout(() => {
+          quoteCard.classList.add('show');
+        }, 50);
+        
+        updateFavoriteButton();
+        setupQuoteActions(quote);
+        
+        // Auto-play audio with slight delay
+        setTimeout(() => {
+          generateAudio(quote.text, true);
+        }, 800);
+        
+      }, 300);
+    }
+
+    // Setup quote action buttons
+    function setupQuoteActions(quote) {
+      const playBtn = document.getElementById('playBtn');
+      const favoriteBtn = document.getElementById('favoriteBtn');
+      const shareBtn = document.getElementById('shareBtn');
+      const copyBtn = document.getElementById('copyBtn');
+      
+      // Remove existing listeners
+      const newPlayBtn = playBtn.cloneNode(true);
+      const newFavoriteBtn = favoriteBtn.cloneNode(true);
+      const newShareBtn = shareBtn.cloneNode(true);
+      const newCopyBtn = copyBtn.cloneNode(true);
+      
+      playBtn.parentNode.replaceChild(newPlayBtn, playBtn);
+      favoriteBtn.parentNode.replaceChild(newFavoriteBtn, favoriteBtn);
+      shareBtn.parentNode.replaceChild(newShareBtn, shareBtn);
+      copyBtn.parentNode.replaceChild(newCopyBtn, copyBtn);
+      
+      // Add new listeners
+      newPlayBtn.addEventListener('click', () => {
+        window.speechSynthesis.cancel();
+        const utterance = generateAudio(quote.text, true);
+        newPlayBtn.innerHTML = '<i class="fas fa-volume-up"></i> Playing...';
+        
+        utterance.onend = () => {
+          newPlayBtn.innerHTML = '<i class="fas fa-volume-up"></i> Listen';
+        };
+      });
+      
+      newFavoriteBtn.addEventListener('click', () => toggleFavorite(quote));
+      newShareBtn.addEventListener('click', () => shareQuote(quote));
+      newCopyBtn.addEventListener('click', () => copyQuote(quote));
+    }
+
+    // Enhanced share functionality with more options
+    async function shareQuote(quote) {
+      const shareText = `"${quote.text}"\n\n— ${quote.source}\n\nShared from Divine Light ✨`;
+      const shareData = {
+        title: 'Divine Wisdom ✨',
+        text: shareText,
+        url: window.location.href
+      };
+
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+          showNotification('✨ Wisdom shared successfully!', 'success');
+        } catch (err) {
+          if (err.name !== 'AbortError') {
+            fallbackShare(shareData);
+          }
+        }
+      } else {
+        fallbackShare(shareData);
+      }
+    }
+
+    function fallbackShare(shareData) {
+      const encodedText = encodeURIComponent(shareData.text);
+      const encodedUrl = encodeURIComponent(shareData.url);
+      
+      const platforms = [
+        { 
+          name: 'Twitter', 
+          url: `https://twitter.com/intent/tweet?text=${encodedText}&url=${encodedUrl}`,
+          icon: 'fab fa-twitter'
+        },
+        { 
+          name: 'Facebook', 
+          url: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedText}`,
+          icon: 'fab fa-facebook'
+        },
+        { 
+          name: 'WhatsApp', 
+          url: `https://api.whatsapp.com/send?text=${encodedText}`,
+          icon: 'fab fa-whatsapp'
+        },
+        { 
+          name: 'Telegram', 
+          url: `https://t.me/share/url?url=${encodedUrl}&text=${encodedText}`,
+          icon: 'fab fa-telegram'
+        }
+      ];
+      
+      // Create share modal
+      const modal = document.createElement('div');
+      modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        backdrop-filter: blur(10px);
+      `;
+      
+      modal.innerHTML = `
+        <div style="background: white; padding: 30px; border-radius: 20px; max-width: 400px; width: 90%;">
+          <h3 style="margin-bottom: 20px; text-align: center; color: #333;">Share This Wisdom</h3>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+            ${platforms.map(platform => `
+              <button onclick="window.open('${platform.url}', '_blank'); document.body.removeChild(this.closest('.share-modal'))" 
+                      style="padding: 15px; border: none; border-radius: 10px; background: var(--primary-gradient); color: white; cursor: pointer; display: flex; align-items: center; gap: 10px; justify-content: center; transition: transform 0.2s ease;">
+                <i class="${platform.icon}"></i> ${platform.name}
+              </button>
+            `).join('')}
+          </div>
+          <button onclick="document.body.removeChild(this.closest('.share-modal'))" 
+                  style="width: 100%; margin-top: 20px; padding: 10px; border: 2px solid #ddd; border-radius: 10px; background: white; cursor: pointer;">
+            Cancel
+          </button>
+        </div>
+      `;
+      
+      modal.className = 'share-modal';
+      document.body.appendChild(modal);
+      
+      // Close on backdrop click
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          document.body.removeChild(modal);
+        }
+      });
+    }
+
+    // Enhanced copy functionality with better feedback
+    async function copyQuote(quote) {
+      const text = `"${quote.text}"\n\n— ${quote.source}`;
+      
+      try {
+        await navigator.clipboard.writeText(text);
+        showNotification('📋 Wisdom copied to clipboard!', 'success');
+        
+        // Visual feedback on copy button
+        const copyBtn = document.getElementById('copyBtn');
+        const originalText = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+        copyBtn.style.background = 'var(--success-gradient)';
+        
+        setTimeout(() => {
+          copyBtn.innerHTML = originalText;
+          copyBtn.style.background = '';
+        }, 2000);
+        
+      } catch (err) {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.opacity = '0';
+        document.body.appendChild(textArea);
+        textArea.select();
+        
+        try {
+          document.execCommand('copy');
+          showNotification('📋 Wisdom copied to clipboard!', 'success');
+        } catch (fallbackErr) {
+          showNotification('❌ Unable to copy. Please select and copy manually.', 'error');
+        }
+        
+        document.body.removeChild(textArea);
+      }
+    }
+
+    // Enhanced notification system with better styling and positioning
+    function showNotification(message, type = 'info') {
+      const notification = document.createElement('div');
+      notification.className = 'notification';
+      
+      const icons = {
+        success: '✅',
+        error: '❌',
+        warning: '⚠️',
+        info: 'ℹ️'
+      };
+      
+      const colors = {
+        success: 'linear-gradient(135deg, #11998e, #38ef7d)',
+        error: 'linear-gradient(135deg, #ff5f6d, #ffc371)',
+        warning: 'linear-gradient(135deg, #f093fb, #f5576c)',
+        info: 'linear-gradient(135deg, #667eea, #764ba2)'
+      };
+      
+      notification.style.background = colors[type] || colors.info;
+      notification.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 1.2em;">${icons[type] || icons.info}</span>
+          <span>${message}</span>
+        </div>
+      `;
+      
+      document.body.appendChild(notification);
+      
+      // Auto-remove after delay
+      setTimeout(() => {
+        notification.style.animation = 'slideOutRight 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+        setTimeout(() => {
+          if (document.body.contains(notification)) {
+            document.body.removeChild(notification);
+          }
+        }, 400);
+      }, 4000);
+      
+      // Click to dismiss
+      notification.addEventListener('click', () => {
+        notification.style.animation = 'slideOutRight 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
+        setTimeout(() => {
+          if (document.body.contains(notification)) {
+            document.body.removeChild(notification);
+          }
+        }, 400);
+      });
+    }
+
+    // Enhanced keyboard navigation with more shortcuts
+    document.addEventListener('keydown', (event) => {
+      // Don't trigger shortcuts when typing in inputs
+      if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+        return;
+      }
+      
+      switch (event.key.toLowerCase()) {
+        case ' ':
+          event.preventDefault();
+          generatePassage();
+          break;
+        case 'f':
+          event.preventDefault();
+          if (appState.currentQuote) {
+            toggleFavorite(appState.currentQuote);
+          }
+          break;
+        case 'c':
+          event.preventDefault();
+          if (appState.currentQuote) {
+            copyQuote(appState.currentQuote);
+          }
+          break;
+        case 's':
+          event.preventDefault();
+          if (appState.currentQuote) {
+            shareQuote(appState.currentQuote);
+          }
+          break;
+        case 'p':
+          event.preventDefault();
+          if (appState.currentQuote) {
+            window.speechSynthesis.cancel();
+            generateAudio(appState.currentQuote.text, true);
+          }
+          break;
+        case 'escape':
+          // Close any open modals
+          const modals = document.querySelectorAll('.share-modal');
+          modals.forEach(modal => document.body.removeChild(modal));
+          break;
+      }
+    });
+
+    // Enhanced event listeners setup
+    function setupEventListeners() {
+      // Theme selector
+      const themeSelector = document.getElementById('themeSelector');
+      themeSelector.addEventListener('change', (e) => {
+        setTheme(e.target.value);
+      });
+
+      // Source filter
+      const sourceFilter = document.getElementById('sourceFilter');
+      sourceFilter.addEventListener('change', () => {
+        // Reset used passages when filter changes for variety
+        appState.usedPassages = [];
+        localStorage.setItem('usedPassages', JSON.stringify(appState.usedPassages));
+      });
+
+      // Search functionality
+      setupSearch();
+      
+      // Cross button
+      const crossButton = document.getElementById('crossButton');
+      crossButton.addEventListener('click', generatePassage);
+    }
+
+    // Enhanced app initialization
+    function initializeApp() {
+      try {
+        // Load saved theme
+        const savedTheme = localStorage.getItem('selectedTheme') || 'theme-ocean';
+        document.getElementById('themeSelector').value = savedTheme;
+        setTheme(savedTheme);
+        
+        // Initialize first visit tracking
+        if (!localStorage.getItem('firstVisit')) {
+          localStorage.setItem('firstVisit', new Date().toISOString());
+          appState.firstVisit = new Date().toISOString();
+        }
+        
+        // Display daily quote
+        displayDailyQuote();
+        
+        // Update statistics
+        updateStats();
+        
+        // Setup event listeners
+        setupEventListeners();
+        
+        // Show welcome message for new users
+        const isFirstVisit = !appState.lastVisit;
+        setTimeout(() => {
+          if (isFirstVisit) {
+            showNotification('🌟 Welcome to Divine Light! Click the sacred cross to receive wisdom.', 'success');
+          } else {
+            showNotification('✨ Welcome back, seeker of wisdom!', 'info');
+          }
+        }, 1500);
+        
+        // Preload voices for better TTS experience
+        if ('speechSynthesis' in window) {
+          window.speechSynthesis.getVoices();
+        }
+        
+        console.log('✨ Divine Light initialized successfully');
+        
+      } catch (error) {
+        console.error('❌ Error initializing app:', error);
+        showNotification('⚠️ Some features may not work properly. Please refresh the page.', 'warning');
+      }
+    }
+
+    // Start the enhanced app
+    document.addEventListener('DOMContentLoaded', initializeApp);
+
+    // Service Worker registration for offline functionality
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('✅ SW registered:', registration);
+          })
+          .catch(registrationError => {
+            console.log('❌ SW registration failed:', registrationError);
+          });
+      });
+    }
+
+    // Handle online/offline status
+    window.addEventListener('online', () => {
+      showNotification('🌐 Back online! All features available.', 'success');
+    });
+
+    window.addEventListener('offline', () => {
+      showNotification('📱 Offline mode. Local wisdom still available.', 'info');
+    });
+
+    // Prevent context menu on cross button for better mobile experience
+    document.getElementById('crossButton').addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+    });
+
+    // Add touch feedback for mobile
+    if ('ontouchstart' in window) {
+      document.getElementById('crossButton').addEventListener('touchstart', (e) => {
+        e.target.style.transform = 'scale(0.95)';
+      });
+      
+      document.getElementById('crossButton').addEventListener('touchend', (e) => {
+        e.target.style.transform = '';
+      });
+    }
+  </script>
 </body>
 </html>
