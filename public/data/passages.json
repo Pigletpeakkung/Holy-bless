@@ -1,0 +1,689 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2024-01-01",
+  "totalPassages": 86,
+  "passages": [
+    {
+      "text": "You are God, in drag.",
+      "id": 1,
+      "source": "Conversations with God",
+      "category": "divine-nature",
+      "tags": ["divinity", "identity", "consciousness"]
+    },
+    {
+      "text": "There is no such thing as a better way, only another way.",
+      "id": 2,
+      "source": "Conversations with God",
+      "category": "perspective",
+      "tags": ["choice", "perspective", "acceptance"]
+    },
+    {
+      "text": "The soul creates, the mind reacts, the body experiences.",
+      "id": 3,
+      "source": "Conversations with God",
+      "category": "consciousness",
+      "tags": ["soul", "mind", "body", "creation"]
+    },
+    {
+      "text": "All human actions are motivated at their deepest level by one of two emotions: fear or love.",
+      "id": 4,
+      "source": "Conversations with God",
+      "category": "emotions",
+      "tags": ["fear", "love", "motivation", "emotions"]
+    },
+    {
+      "text": "There are no victims in the universe—only creators.",
+      "id": 5,
+      "source": "Conversations with God",
+      "category": "responsibility",
+      "tags": ["creation", "responsibility", "empowerment"]
+    },
+    {
+      "text": "Your life is not about you, it is about everyone whose life you touch.",
+      "id": 6,
+      "source": "Conversations with God",
+      "category": "service",
+      "tags": ["service", "connection", "purpose"]
+    },
+    {
+      "text": "The purpose of relationship is not to have another who might complete you, but to have another with whom you might share your completeness.",
+      "id": 7,
+      "source": "Conversations with God",
+      "category": "relationships",
+      "tags": ["relationships", "completeness", "sharing"]
+    },
+    {
+      "text": "There is only one purpose for all of life, and that is for you and all that lives to experience fullest glory.",
+      "id": 8,
+      "source": "Conversations with God",
+      "category": "purpose",
+      "tags": ["purpose", "glory", "experience"]
+    },
+    {
+      "text": "You are the creator of your own reality, and life can show up no other way for you than that way in which you think it will.",
+      "id": 9,
+      "source": "Conversations with God",
+      "category": "creation",
+      "tags": ["reality", "creation", "thoughts", "manifestation"]
+    },
+    {
+      "text": "The truth is simple: There is no separation between you and God.",
+      "id": 10,
+      "source": "Conversations with God",
+      "category": "unity",
+      "tags": ["unity", "god", "truth", "oneness"]
+    },
+    {
+      "text": "Your way of being is your way of believing, and your way of believing creates your experience.",
+      "id": 11,
+      "source": "Conversations with God",
+      "category": "beliefs",
+      "tags": ["beliefs", "being", "experience", "creation"]
+    },
+    {
+      "text": "The moment you declare anything, everything unlike it will come into the space.",
+      "id": 12,
+      "source": "Conversations with God",
+      "category": "manifestation",
+      "tags": ["declaration", "manifestation", "contrast"]
+    },
+    {
+      "text": "There is no truth except the truth that exists within you.",
+      "id": 13,
+      "source": "Conversations with God",
+      "category": "truth",
+      "tags": ["truth", "inner-wisdom", "self-knowledge"]
+    },
+    {
+      "text": "You are the one who calls the light into being. Indeed, you are the light.",
+      "id": 14,
+      "source": "Conversations with God",
+      "category": "light",
+      "tags": ["light", "being", "creation", "divinity"]
+    },
+    {
+      "text": "The deepest secret is that life is not a process of discovery, but a process of creation.",
+      "id": 15,
+      "source": "Conversations with God",
+      "category": "creation",
+      "tags": ["creation", "life", "process", "secret"]
+    },
+    {
+      "text": "You are not a human being having a spiritual experience. You are a spiritual being having a human experience.",
+      "id": 16,
+      "source": "Seth Speaks",
+      "category": "identity",
+      "tags": ["identity", "spiritual", "human", "experience"]
+    },
+    {
+      "text": "The universe is not something apart from you. You are the universe expressing itself as a human for a little while.",
+      "id": 17,
+      "source": "Seth Speaks",
+      "category": "unity",
+      "tags": ["universe", "expression", "unity", "consciousness"]
+    },
+    {
+      "text": "Your imagination is your gateway to other realities.",
+      "id": 18,
+      "source": "Seth Speaks",
+      "category": "imagination",
+      "tags": ["imagination", "realities", "gateway", "consciousness"]
+    },
+    {
+      "text": "You create your reality according to your beliefs and expectations.",
+      "id": 19,
+      "source": "Seth Speaks",
+      "category": "reality-creation",
+      "tags": ["reality", "beliefs", "expectations", "creation"]
+    },
+    {
+      "text": "The present is the point of power where past and future meet.",
+      "id": 20,
+      "source": "Seth Speaks",
+      "category": "present-moment",
+      "tags": ["present", "power", "time", "moment"]
+    },
+    {
+      "text": "You are given the gift of the gods; you create your reality according to your beliefs.",
+      "id": 21,
+      "source": "Seth Speaks",
+      "category": "divine-gift",
+      "tags": ["gift", "gods", "reality", "beliefs", "creation"]
+    },
+    {
+      "text": "The soul is a medium for creativity, a creator that forms realities.",
+      "id": 22,
+      "source": "Seth Speaks",
+      "category": "soul",
+      "tags": ["soul", "creativity", "creator", "realities"]
+    },
+    {
+      "text": "You are not at the mercy of past events unless you believe you are.",
+      "id": 23,
+      "source": "Seth Speaks",
+      "category": "empowerment",
+      "tags": ["past", "mercy", "beliefs", "empowerment"]
+    },
+    {
+      "text": "Dreams are the language of the soul.",
+      "id": 24,
+      "source": "Seth Speaks",
+      "category": "dreams",
+      "tags": ["dreams", "language", "soul", "communication"]
+    },
+    {
+      "text": "You are more than your physical body. Your consciousness continues when your body dies.",
+      "id": 25,
+      "source": "Seth Speaks",
+      "category": "consciousness",
+      "tags": ["consciousness", "body", "death", "continuity"]
+    },
+    {
+      "text": "Probable realities exist around you like shadows, waiting for your recognition.",
+      "id": 26,
+      "source": "Seth Speaks",
+      "category": "realities",
+      "tags": ["probable", "realities", "shadows", "recognition"]
+    },
+    {
+      "text": "Your thoughts are as real as your physical objects.",
+      "id": 27,
+      "source": "Seth Speaks",
+      "category": "thoughts",
+      "tags": ["thoughts", "reality", "physical", "objects"]
+    },
+    {
+      "text": "You are a multidimensional being, experiencing many realities simultaneously.",
+      "id": 28,
+      "source": "Seth Speaks",
+      "category": "multidimensional",
+      "tags": ["multidimensional", "being", "realities", "simultaneous"]
+    },
+    {
+      "text": "The answers you seek lie within your own consciousness.",
+      "id": 29,
+      "source": "Seth Speaks",
+      "category": "inner-wisdom",
+      "tags": ["answers", "consciousness", "inner", "wisdom"]
+    },
+    {
+      "text": "Your beliefs shape your health, your relationships, and your world.",
+      "id": 30,
+      "source": "Seth Speaks",
+      "category": "beliefs",
+      "tags": ["beliefs", "health", "relationships", "world"]
+    },
+    {
+      "text": "You are not a drop in the ocean. You are the entire ocean in a drop.",
+      "id": 31,
+      "source": "Rumi",
+      "category": "unity",
+      "tags": ["ocean", "drop", "unity", "wholeness"]
+    },
+    {
+      "text": "What you seek is seeking you.",
+      "id": 32,
+      "source": "Rumi",
+      "category": "seeking",
+      "tags": ["seeking", "attraction", "destiny", "connection"]
+    },
+    {
+      "text": "Don't grieve. Anything you lose comes round in another form.",
+      "id": 33,
+      "source": "Rumi",
+      "category": "loss",
+      "tags": ["grief", "loss", "transformation", "cycles"]
+    },
+    {
+      "text": "Let yourself be silently drawn by the strange pull of what you really love.",
+      "id": 34,
+      "source": "Rumi",
+      "category": "love",
+      "tags": ["love", "attraction", "silence", "calling"]
+    },
+    {
+      "text": "Be like a tree and let the dead leaves drop.",
+      "id": 35,
+      "source": "Rumi",
+      "category": "letting-go",
+      "tags": ["tree", "leaves", "letting-go", "nature"]
+    },
+    {
+      "text": "The wound is the place where the Light enters you.",
+      "id": 36,
+      "source": "Rumi",
+      "category": "healing",
+      "tags": ["wound", "light", "healing", "transformation"]
+    },
+    {
+      "text": "When you do things from your soul, you feel a river moving in you, a joy.",
+      "id": 37,
+      "source": "Rumi",
+      "category": "soul",
+      "tags": ["soul", "river", "joy", "flow"]
+    },
+    {
+      "text": "Your task is not to seek for love, but merely to seek and find all the barriers within yourself that you have built against it.",
+      "id": 38,
+      "source": "Rumi",
+      "category": "love",
+      "tags": ["love", "barriers", "self-discovery", "obstacles"]
+    },
+    {
+      "text": "Why do you stay in prison when the door is so wide open?",
+      "id": 39,
+      "source": "Rumi",
+      "category": "freedom",
+      "tags": ["prison", "door", "freedom", "choice"]
+    },
+    {
+      "text": "Be a lamp, or a lifeboat, or a ladder.",
+      "id": 40,
+      "source": "Rumi",
+      "category": "service",
+      "tags": ["lamp", "lifeboat", "ladder", "service", "help"]
+    },
+    {
+      "text": "Where there is ruin, there is hope for a treasure.",
+      "id": 41,
+      "source": "Rumi",
+      "category": "hope",
+      "tags": ["ruin", "hope", "treasure", "transformation"]
+    },
+    {
+      "text": "Let the beauty of what you love be what you do.",
+      "id": 42,
+      "source": "Rumi",
+      "category": "purpose",
+      "tags": ["beauty", "love", "purpose", "action"]
+    },
+    {
+      "text": "The universe is not outside of you. Look inside yourself; everything that you want, you already are.",
+      "id": 43,
+      "source": "Rumi",
+      "category": "inner-wisdom",
+      "tags": ["universe", "inside", "self", "completeness"]
+    },
+    {
+      "text": "You were born with wings. Why prefer to crawl through life?",
+      "id": 44,
+      "source": "Rumi",
+      "category": "potential",
+      "tags": ["wings", "crawl", "potential", "flight"]
+    },
+    {
+      "text": "Sell your cleverness and buy bewilderment.",
+      "id": 45,
+      "source": "Rumi",
+      "category": "wisdom",
+      "tags": ["cleverness", "bewilderment", "wisdom", "mystery"]
+    },
+    {
+      "text": "You are an aperture through which the universe is looking at and exploring itself.",
+      "id": 46,
+      "source": "Alan Watts",
+      "category": "consciousness",
+      "tags": ["aperture", "universe", "exploration", "consciousness"]
+    },
+    {
+      "text": "The only way to make sense out of change is to plunge into it, move with it, and join the dance.",
+      "id": 47,
+      "source": "Alan Watts",
+      "category": "change",
+      "tags": ["change", "dance", "flow", "acceptance"]
+    },
+    {
+      "text": "Trying to define yourself is like trying to bite your own teeth.",
+      "id": 48,
+      "source": "Alan Watts",
+      "category": "identity",
+      "tags": ["definition", "self", "identity", "paradox"]
+    },
+    {
+      "text": "You are that vast thing that you see far, far off with great telescopes.",
+      "id": 49,
+      "source": "Alan Watts",
+      "category": "vastness",
+      "tags": ["vast", "telescopes", "cosmos", "identity"]
+    },
+    {
+      "text": "This is the real secret of life—to be completely engaged with what you are doing in the here and now.",
+      "id": 50,
+      "source": "Alan Watts",
+      "category": "presence",
+      "tags": ["secret", "engaged", "here", "now", "presence"]
+    },
+    {
+      "text": "The more a thing tends to be permanent, the more it tends to be lifeless.",
+      "id": 51,
+      "source": "Alan Watts",
+      "category": "impermanence",
+      "tags": ["permanent", "lifeless", "change", "flow"]
+    },
+    {
+      "text": "We do not 'come into' this world; we come out of it, as leaves from a tree.",
+      "id": 52,
+      "source": "Alan Watts",
+      "category": "nature",
+      "tags": ["world", "leaves", "tree", "nature", "belonging"]
+    },
+    {
+      "text": "No one is more dangerously insane than one who is sane all the time.",
+      "id": 53,
+      "source": "Alan Watts",
+      "category": "sanity",
+      "tags": ["insane", "sane", "balance", "madness"]
+    },
+    {
+      "text": "Muddy water is best cleared by leaving it alone.",
+      "id": 54,
+      "source": "Alan Watts",
+      "category": "clarity",
+      "tags": ["muddy", "water", "clarity", "patience", "non-action"]
+    },
+    {
+      "text": "The ego is nothing other than the focus of conscious attention.",
+      "id": 55,
+      "source": "Alan Watts",
+      "category": "ego",
+      "tags": ["ego", "focus", "attention", "consciousness"]
+    },
+    {
+      "text": "You are under no obligation to be the same person you were five minutes ago.",
+      "id": 56,
+      "source": "Alan Watts",
+      "category": "change",
+      "tags": ["obligation", "person", "change", "freedom"]
+    },
+    {
+      "text": "Problems that remain persistently insoluble should always be suspected as questions asked in the wrong way.",
+      "id": 57,
+      "source": "Alan Watts",
+      "category": "problems",
+      "tags": ["problems", "questions", "perspective", "approach"]
+    },
+    {
+      "text": "The art of living is neither careless drifting nor fearful clinging, but a dance.",
+      "id": 58,
+      "source": "Alan Watts",
+      "category": "living",
+      "tags": ["art", "living", "dance", "balance", "flow"]
+    },
+    {
+      "text": "What you are basically, deep deep down, is simply the fabric and structure of existence itself.",
+      "id": 59,
+      "source": "Alan Watts",
+      "category": "existence",
+      "tags": ["fabric", "structure", "existence", "identity"]
+    },
+    {
+      "text": "The meaning of life is just to be alive. It is so plain and so obvious and so simple.",
+      "id": 60,
+      "source": "Alan Watts",
+      "category": "meaning",
+      "tags": ["meaning", "life", "alive", "simple"]
+    },
+    {
+      "text": "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment.",
+      "id": 61,
+      "source": "Buddha",
+      "category": "mindfulness",
+      "tags": ["past", "future", "present", "mind", "concentration"]
+    },
+    {
+      "text": "Peace comes from within. Do not seek it without.",
+      "id": 62,
+      "source": "Buddha",
+      "category": "peace",
+      "tags": ["peace", "within", "seeking", "inner"]
+    },
+    {
+      "text": "Holding onto anger is like drinking poison and expecting the other person to die.",
+      "id": 63,
+      "source": "Buddhist proverb",
+      "category": "anger",
+      "tags": ["anger", "poison", "holding", "release"]
+    },
+    {
+      "text": "Thousands of candles can be lit from a single candle, and the life of the candle will not be shortened.",
+      "id": 64,
+      "source": "Buddha",
+      "category": "sharing",
+      "tags": ["candles", "light", "sharing", "abundance"]
+    },
+    {
+      "text": "You yourself, as much as anybody in the entire universe, deserve your love and affection.",
+      "id": 65,
+      "source": "Buddha",
+      "category": "self-love",
+      "tags": ["self", "love", "affection", "deserve", "universe"]
+    },
+    {
+      "text": "In the end, only three things matter: how much you loved, how gently you lived, and how gracefully you let go.",
+      "id": 66,
+      "source": "Buddhist saying",
+      "category": "life-wisdom",
+      "tags": ["love", "gentle", "graceful", "letting-go"]
+    },
+    {
+      "text": "The root of suffering is attachment.",
+      "id": 67,
+      "source": "Buddha",
+      "category": "suffering",
+      "tags": ["suffering", "attachment", "root", "freedom"]
+    },
+    {
+      "text": "There is no path to happiness: happiness is the path.",
+      "id": 68,
+      "source": "Buddha",
+      "category": "happiness",
+      "tags": ["path", "happiness", "journey", "destination"]
+    },
+    {
+      "text": "All that we are is the result of what we have thought.",
+      "id": 69,
+      "source": "Buddha",
+      "category": "thoughts",
+      "tags": ["thoughts", "result", "being", "mind"]
+    },
+    {
+      "text": "Better than a thousand hollow words is one word that brings peace.",
+      "id": 70,
+      "source": "Buddha",
+      "category": "words",
+      "tags": ["words", "hollow", "peace", "meaning"]
+    },
+    {
+      "text": "Just as a snake sheds its skin, we must shed our past over and over again.",
+      "id": 71,
+      "source": "Buddha",
+      "category": "transformation",
+      "tags": ["snake", "skin", "past", "shedding", "transformation"]
+    },
+    {
+      "text": "The mind is everything. What you think you become.",
+      "id": 72,
+      "source": "Buddha",
+      "category": "mind",
+      "tags": ["mind", "think", "become", "transformation"]
+    },
+    {
+      "text": "To understand everything is to forgive everything.",
+      "id": 73,
+      "source": "Buddha",
+      "category": "forgiveness",
+      "tags": ["understand", "forgive", "compassion", "wisdom"]
+    },
+    {
+      "text": "No one saves us but ourselves. No one can and no one may. We ourselves must walk the path.",
+      "id": 74,
+      "source": "Buddha",
+      "category": "self-reliance",
+      "tags": ["save", "ourselves", "path", "self-reliance"]
+    },
+    {
+      "text": "Work out your own salvation. Do not depend on others.",
+      "id": 75,
+      "source": "Buddha",
+      "category": "independence",
+      "tags": ["salvation", "work", "depend", "independence"]
+    },
+    {
+      "text": "The Tao that can be told is not the eternal Tao.",
+      "id": 76,
+      "source": "Lao Tzu, Tao Te Ching",
+      "category": "mystery",
+      "tags": ["tao", "eternal", "mystery", "ineffable"]
+    },
+    {
+      "text": "Nature does not hurry, yet everything is accomplished.",
+      "id": 77,
+      "source": "Lao Tzu, Tao Te Ching",
+      "category": "patience",
+      "tags": ["nature", "hurry", "accomplished", "patience", "timing"]
+    },
+    {
+      "text": "When I let go of what I am, I become what I might be.",
+      "id": 78,
+      "source": "Lao Tzu, Tao Te Ching",
+      "category": "transformation",
+      "tags": ["let-go", "become", "potential", "transformation"]
+    },
+    {
+      "text": "A good traveler has no fixed plans and is not intent on arriving.",
+      "id": 79,
+      "source": "Lao Tzu, Tao Te Ching",
+      "category": "journey",
+      "tags": ["traveler", "plans", "arriving", "journey", "flow"]
+    },
+    {
+      "text": "Knowing others is intelligence; knowing yourself is true wisdom.",
+      "id": 80,
+      "source": "Lao Tzu, Tao Te Ching",
+      "category": "wisdom",
+      "tags": ["knowing", "others", "intelligence", "self", "wisdom"]
+    },
+    {
+      "text": "The soft overcomes the hard; the gentle overcomes the rigid.",
+      "id": 81,
+      "source": "Lao Tzu, Tao Te Ching",
+      "category": "gentleness",
+      "tags": ["soft", "hard", "gentle", "rigid", "strength"]
+    },
+    {
+      "text": "He who knows he has enough is rich.",
+      "id": 82,
+      "source": "Lao Tzu, Tao Te Ching",
+      "category": "contentment",
+      "tags": ["enough", "rich", "contentment", "abundance"]
+    },
+    {
+      "text": "The journey of a thousand miles begins with one step.",
+      "id": 83,
+      "source": "Lao Tzu, Tao Te Ching",
+      "category": "beginning",
+      "tags": ["journey", "miles", "step", "beginning", "progress"]
+    },
+    {
+      "text": "When you realize there is nothing lacking, the whole world belongs to you.",
+      "id": 84,
+      "source": "Lao Tzu, Tao Te Ching",
+      "category": "abundance",
+      "tags": ["lacking", "world", "belongs", "abundance", "realization"]
+    },
+    {
+      "text": "Silence is a source of great strength.",
+      "id": 85,
+      "source": "Lao Tzu, Tao Te Ching",
+      "category": "silence",
+      "tags": ["silence", "source", "strength", "power"]
+    },
+    {
+      "text": "Be content with what you have; rejoice in the way things are.",
+      "id": 86,
+      "source": "Lao Tzu, Tao Te Ching",
+      "category": "contentment",
+      "tags": ["content", "have", "rejoice", "things", "acceptance"]
+    }
+  ],
+  "sources": [
+    "Conversations with God",
+    "Seth Speaks", 
+    "Rumi",
+    "Alan Watts",
+    "Buddha",
+    "Buddhist proverb",
+    "Buddhist saying",
+    "Lao Tzu, Tao Te Ching"
+  ],
+  "categories": [
+    "divine-nature",
+    "perspective", 
+    "consciousness",
+    "emotions",
+    "responsibility",
+    "service",
+    "relationships",
+    "purpose",
+    "creation",
+    "unity",
+    "beliefs",
+    "manifestation",
+    "truth",
+    "light",
+    "identity",
+    "imagination",
+    "reality-creation",
+    "present-moment",
+    "divine-gift",
+    "soul",
+    "empowerment",
+    "dreams",
+    "multidimensional",
+    "inner-wisdom",
+    "seeking",
+    "loss",
+    "love",
+    "letting-go",
+    "healing",
+    "freedom",
+    "hope",
+    "potential",
+    "wisdom",
+    "change",
+    "vastness",
+    "presence",
+    "impermanence",
+    "nature",
+    "sanity",
+    "clarity",
+    "ego",
+    "problems",
+    "living",
+    "existence",
+    "meaning",
+    "mindfulness",
+    "peace",
+    "anger",
+    "sharing",
+    "self-love",
+    "life-wisdom",
+    "suffering",
+    "happiness",
+    "thoughts",
+    "words",
+    "transformation",
+    "mind",
+    "forgiveness",
+    "self-reliance",
+    "independence",
+    "mystery",
+    "patience",
+    "journey",
+    "gentleness",
+    "contentment",
+    "beginning",
+    "abundance",
+    "silence"
+  ]
+}
