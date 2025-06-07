@@ -2,38 +2,92 @@
   "name": "holy-bless-divine-wisdom-generator",
   "version": "1.0.0",
   "description": "An interactive web application that delivers daily inspirational quotes and wisdom from various spiritual traditions, fostering personal reflection and community engagement.",
-  "main": "index.js",
+  "main": "public/index.html",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",  // Development mode for auto-restarting the server
-    "build": "webpack --config webpack.config.js",  // If using Webpack for bundling
-    "test": "jest"  // If using Jest for testing
+    "start": "live-server public/",
+    "dev": "live-server public/ --watch=public/",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "cleancss -o public/styles.min.css public/styles.css",
+    "minify-js": "uglifyjs public/app.js -o public/app.min.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint public/app.js",
+    "format": "prettier --write public/*.{js,css,html}",
+    "deploy": "gh-pages -d public"
   },
   "dependencies": {
-    "express": "^4.17.1",           // For serving the application
-    "axios": "^0.27.2",             // For making API requests
-    "dotenv": "^10.0.0",            // For handling environment variables
-    "cors": "^2.8.5"                // For enabling Cross-Origin Resource Sharing
+    "axios": "^1.6.0",
+    "bootstrap": "^4.6.2",
+    "jquery": "^3.6.4",
+    "toastify-js": "^1.12.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15",            // Development tool for auto-restarting
-    "webpack": "^5.64.4",            // Module bundler (if needed)
-    "webpack-cli": "^4.9.1",         // Command-line interface for Webpack
-    "jest": "^27.4.7"                // Testing framework
+    "clean-css-cli": "^5.6.2",
+    "eslint": "^8.50.0",
+    "gh-pages": "^6.0.0",
+    "jest": "^29.7.0",
+    "live-server": "^1.2.2",
+    "prettier": "^3.0.3",
+    "uglify-js": "^3.17.4"
   },
   "keywords": [
     "quotes",
     "wisdom",
     "spirituality",
-    "growth",
     "inspiration",
-    "community"
+    "meditation",
+    "personal-growth",
+    "daily-quotes",
+    "consciousness",
+    "divine-wisdom",
+    "reflection",
+    "community",
+    "web-app",
+    "javascript",
+    "bootstrap"
   ],
-  "author": "Your Name",            // Replace with your name
-  "license": "MIT",                 // Choose an appropriate license
-  "homepage": "https://yourprojecthomepage.com",  // Replace with your project homepage
+  "author": {
+    "name": "Than Attsitt",
+    "email": "thanattsitt.info@yahoo.co.uk",
+    "url": "https://github.com/Pigletpeakkung"
+  },
+  "license": "MIT",
+  "homepage": "https://pigletpeakkung.github.io/holy-bless-divine-wisdom-generator",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/holy-bless-divine-wisdom-generator.git"  // Replace with your GitHub repo URL
+    "url": "https://github.com/Pigletpeakkung/holy-bless-divine-wisdom-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Pigletpeakkung/holy-bless-divine-wisdom-generator/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": ["<rootDir>/tests/setup.js"],
+    "testMatch": ["<rootDir>/tests/**/*.test.js"]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "jest": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 12,
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-console": "warn",
+      "no-unused-vars": "error"
+    }
   }
 }
