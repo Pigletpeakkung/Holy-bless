@@ -3,85 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Holy Bless - Your daily source of spiritual wisdom and inspiration. Discover divine quotes and reflect on your spiritual journey.">
-    <meta name="keywords" content="spiritual wisdom, daily quotes, inspiration, meditation, consciousness, divine wisdom">
+    <meta name="description" content="Holy Bless - Your daily source of spiritual wisdom and divine inspiration. Discover sacred quotes from Conversations with God, Seth Speaks, Rumi, Alan Watts, Buddha, and Lao Tzu.">
+    <meta name="keywords" content="spiritual wisdom, daily quotes, inspiration, meditation, consciousness, divine wisdom, conversations with god, seth speaks, rumi, alan watts, buddha, lao tzu">
     <meta name="author" content="Than Attsitt">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Holy Bless - Divine Wisdom Generator">
-    <meta property="og:description" content="Your daily source of spiritual wisdom and inspiration">
+    <meta property="og:description" content="Your daily source of spiritual wisdom and divine inspiration from the greatest spiritual teachers">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://pigletpeakkung.github.io/holy-bless-divine-wisdom-generator">
+    <meta property="og:image" content="https://pigletpeakkung.github.io/holy-bless-divine-wisdom-generator/og-image.png">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Holy Bless - Divine Wisdom Generator">
-    <meta name="twitter:description" content="Your daily source of spiritual wisdom and inspiration">
+    <meta name="twitter:description" content="Your daily source of spiritual wisdom and divine inspiration">
+    <meta name="twitter:image" content="https://pigletpeakkung.github.io/holy-bless-divine-wisdom-generator/twitter-image.png">
     
-    <title>Holy Bless - Divine Wisdom Generator</title>
+    <title>Holy Bless - Divine Wisdom Generator | Sacred Quotes & Spiritual Inspiration</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./data/passages.json" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="app.js" as="script">
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
     
     <!-- Toastify CSS for Notifications -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.2/Toastify.min.css" integrity="sha512-oe8OpYjBaDWPt0VQFjbvQjmjCWH1/MG+GdVz9LlxmCU0iKxg8OdWCLSqZJZWmehmOQXgOQQOPXtVfaWOOQFuZg==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/Toastify.min.css" integrity="sha512-maK6ap3cVv6eMSVuYz3EJYqQNFOTpQIuBdqC/2OjLpahUt2qlNVdqoVAcZjOQy5KZKBBjhOYnOIVxaZhIW+Og==" crossorigin="anonymous">
     
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Holy Bless - Divine Wisdom Generator",
+        "description": "Your daily source of spiritual wisdom and divine inspiration",
+        "url": "https://pigletpeakkung.github.io/holy-bless-divine-wisdom-generator",
+        "author": {
+            "@type": "Person",
+            "name": "Than Attsitt"
+        },
+        "applicationCategory": "Lifestyle",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
 </head>
 <body class="theme-ocean">
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner">✨</div>
+            <h2>Connecting to Divine Wisdom...</h2>
+            <p>Loading sacred passages from the masters</p>
+        </div>
+    </div>
+
     <div class="container">
         <!-- Header Section -->
         <header class="header">
             <h1 class="display-3">✨ Holy Bless ✨</h1>
             <p class="lead">Sacred wisdom from the masters of consciousness and divine light</p>
             <p id="greetingMessage" class="font-weight-light"></p>
+            
+            <!-- Service Status Indicator -->
+            <div id="serviceStatus" class="service-status d-none">
+                <small class="text-muted">
+                    <i id="statusIcon" class="fas fa-circle"></i>
+                    <span id="statusText">Loading...</span>
+                </small>
+            </div>
         </header>
 
         <!-- Controls Section -->
         <section class="controls">
             <div class="row w-100">
-                <div class="col-md-6 mb-2">
-                    <label for="themeSelector" class="mr-3">
-                        <i class="fas fa-palette"></i> Select Theme:
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <label for="themeSelector" class="control-label">
+                        <i class="fas fa-palette"></i> Theme:
                     </label>
-                    <select class="theme-selector form-control" id="themeSelector">
+                    <select class="form-control" id="themeSelector">
                         <option value="theme-ocean">🌊 Ocean Depths</option>
                         <option value="theme-sunset">🌅 Sunset Glow</option>
                         <option value="theme-forest">🌲 Forest Wisdom</option>
                         <option value="theme-cosmic">🌌 Cosmic Mystery</option>
                     </select>
                 </div>
-                <div class="col-md-6 mb-2">
-                    <label for="sourceFilter" class="mr-3">
-                        <i class="fas fa-filter"></i> Select Source:
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <label for="sourceFilter" class="control-label">
+                        <i class="fas fa-book"></i> Source:
                     </label>
-                    <select class="source-filter form-control" id="sourceFilter">
-                        <option value="all">All Sources</option>
-                        <option value="Alan Watts">Alan Watts</option>
-                        <option value="Buddha">Buddha</option>
-                        <option value="Lao Tzu">Lao Tzu</option>
-                        <option value="Rumi">Rumi</option>
-                        <option value="Seth Speaks">Seth Speaks</option>
-                        <option value="Conversations with God">Conversations with God</option>
-                        <option value="Emerald Tablet">Emerald Tablet</option>
+                    <select class="form-control" id="sourceFilter">
+                        <option value="">All Sources</option>
+                        <!-- Options will be populated dynamically -->
                     </select>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <label for="categoryFilter" class="control-label">
+                        <i class="fas fa-tags"></i> Category:
+                    </label>
+                    <select class="form-control" id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <!-- Options will be populated dynamically -->
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-2">
+                    <label for="searchInput" class="control-label">
+                        <i class="fas fa-search"></i> Search:
+                    </label>
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search wisdom...">
                 </div>
             </div>
         </section>
 
         <!-- Daily Quote Section -->
         <section class="daily-quote" id="dailyQuote">
-            <h3><i class="fas fa-sun"></i> Today's Sacred Message</h3>
+            <div class="quote-header">
+                <h3><i class="fas fa-sun"></i> Today's Sacred Message</h3>
+                <div class="quote-actions">
+                    <button class="btn btn-sm btn-outline-light" id="favoriteBtn" title="Add to favorites">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-light" id="shareBtn" title="Share this wisdom">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-light" id="copyBtn" title="Copy to clipboard">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+            </div>
+            
             <blockquote id="dailyQuoteContent" class="blockquote text-center">
-                <p id="quoteText">Loading divine wisdom...</p>
+                <p id="quoteText">Receiving divine wisdom...</p>
                 <footer id="quoteAuthor" class="blockquote-footer"></footer>
+                <div id="quoteMeta" class="quote-meta d-none">
+                    <span id="quoteCategory" class="badge badge-primary"></span>
+                    <div id="quoteTags" class="quote-tags"></div>
+                </div>
             </blockquote>
         </section>
 
@@ -89,90 +163,205 @@
         <section class="stats text-center">
             <h4><i class="fas fa-chart-line"></i> Your Spiritual Journey</h4>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-lg-2 col-md-4 col-6">
                     <div class="stat-item">
                         <span class="stat-number" id="totalQuotes">0</span>
                         <span><i class="fas fa-star"></i> Total Wisdom</span>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-2 col-md-4 col-6">
                     <div class="stat-item">
                         <span class="stat-number" id="quotesRead">0</span>
                         <span><i class="fas fa-book-open"></i> Messages Received</span>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-2 col-md-4 col-6">
                     <div class="stat-item">
                         <span class="stat-number" id="favoriteCount">0</span>
-                        <span><i class="fas fa-heart"></i> Favorites Saved</span>
+                        <span><i class="fas fa-heart"></i> Favorites</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number" id="reflectionsCount">0</span>
+                        <span><i class="fas fa-feather-alt"></i> Reflections</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number" id="availablePassages">86</span>
+                        <span><i class="fas fa-scroll"></i> Available</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="stat-item">
+                        <span class="stat-number" id="daysActive">0</span>
+                        <span><i class="fas fa-calendar-alt"></i> Days Active</span>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Reflection Area -->
-        <section id="reflectionArea">
+        <section id="reflectionArea" class="reflection-area">
             <h4><i class="fas fa-feather-alt"></i> Your Sacred Reflections</h4>
-            <textarea 
-                id="userReflection" 
-                class="form-control" 
-                placeholder="What does this wisdom mean to you? How does it resonate with your soul? Share your thoughts and insights..."
-                rows="4"
-                aria-label="Write your reflection on the quote"
-            ></textarea>
-            <button class="btn btn-primary mt-3" onclick="saveReflection()">
-                <i class="fas fa-save"></i> Save Reflection
-            </button>
+            <div class="reflection-input-group">
+                <textarea 
+                    id="userReflection" 
+                    class="form-control" 
+                    placeholder="What does this wisdom mean to you? How does it resonate with your soul? Share your thoughts and insights..."
+                    rows="4"
+                    aria-label="Write your reflection on the quote"
+                ></textarea>
+                <div class="reflection-actions mt-3">
+                    <button class="btn btn-primary" id="saveReflectionBtn">
+                        <i class="fas fa-save"></i> Save Reflection
+                    </button>
+                    <button class="btn btn-secondary ml-2" id="clearReflectionBtn">
+                        <i class="fas fa-eraser"></i> Clear
+                    </button>
+                    <small class="text-muted ml-3">
+                        <i class="fas fa-info-circle"></i> Auto-saves as you type
+                    </small>
+                </div>
+            </div>
         </section>
 
         <!-- Star Button -->
         <div class="star-button-container text-center">
             <button 
                 id="starButton" 
-                class="star-button btn btn-warning" 
+                class="star-button" 
                 aria-label="Receive divine wisdom" 
-                onclick="generatePassage()"
                 title="Click to receive new wisdom (or press Space)"
             >
                 <span class="star-icon">🌟</span>
             </button>
             <p class="star-button-text">Click the sacred star to receive your divine message</p>
-            <small class="text-muted">Tip: Press Space for new wisdom, Ctrl+S to save reflection</small>
+            <div class="keyboard-shortcuts">
+                <small class="text-muted">
+                    <i class="fas fa-keyboard"></i> 
+                    <kbd>Space</kbd> New wisdom • 
+                    <kbd>Ctrl+S</kbd> Save reflection • 
+                    <kbd>Ctrl+F</kbd> Search • 
+                    <kbd>F</kbd> Favorite
+                </small>
+            </div>
         </div>
+
+        <!-- Favorites Section (Initially Hidden) -->
+        <section id="favoritesSection" class="favorites-section d-none">
+            <h4><i class="fas fa-heart text-danger"></i> Your Favorite Wisdom</h4>
+            <div id="favoritesList" class="favorites-list">
+                <!-- Favorites will be populated here -->
+            </div>
+            <div class="text-center mt-3">
+                <button class="btn btn-outline-primary" id="toggleFavoritesBtn">
+                    <i class="fas fa-eye-slash"></i> Hide Favorites
+                </button>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions text-center">
+            <h5><i class="fas fa-bolt"></i> Quick Actions</h5>
+            <div class="action-buttons">
+                <button class="btn btn-outline-primary btn-sm" id="showFavoritesBtn">
+                    <i class="fas fa-heart"></i> View Favorites
+                </button>
+                <button class="btn btn-outline-success btn-sm" id="exportDataBtn">
+                    <i class="fas fa-download"></i> Export Data
+                </button>
+                <button class="btn btn-outline-info btn-sm" id="showStatsBtn">
+                    <i class="fas fa-chart-bar"></i> Detailed Stats
+                </button>
+                <button class="btn btn-outline-warning btn-sm" id="randomCategoryBtn">
+                    <i class="fas fa-random"></i> Random Category
+                </button>
+            </div>
+        </section>
 
         <!-- Footer -->
         <footer class="credit text-center">
-            <p>
-                <i class="fas fa-heart text-danger"></i> 
-                Sacred wisdom from the teachings of: 
-                <span class="font-weight-bold">
-                    Conversations with God, Seth Speaks, Rumi, Alan Watts, 
-                    Florence Scovel Shinn, Lao Tzu, Law of One, Emerald Tablet, Buddha
-                </span>
-            </p>
-            <div class="mt-3">
-                <p>Created with <i class="fas fa-heart text-danger"></i> by 
-                    <a href="https://github.com/Pigletpeakkung" target="_blank" rel="noopener">Than Attsitt</a>
+            <div class="wisdom-sources mb-3">
+                <p class="mb-2">
+                    <i class="fas fa-book-open text-warning"></i> 
+                    <strong>Sacred Wisdom Sources:</strong>
                 </p>
+                <div class="sources-grid">
+                    <span class="source-badge">Conversations with God</span>
+                    <span class="source-badge">Seth Speaks</span>
+                    <span class="source-badge">Rumi</span>
+                    <span class="source-badge">Alan Watts</span>
+                    <span class="source-badge">Buddha</span>
+                    <span class="source-badge">Lao Tzu</span>
+                </div>
+            </div>
+            
+            <div class="creator-info">
+                <p class="mb-2">
+                    Created with <i class="fas fa-heart text-danger"></i> and divine inspiration by 
+                    <a href="https://github.com/Pigletpeakkung" target="_blank" rel="noopener" class="creator-link">
+                        <strong>Than Attsitt</strong>
+                    </a>
+                </p>
+                
                 <div class="social-links">
-                    <a href="https://paypal.me/@thanattsittS" target="_blank" rel="noopener" title="Support via PayPal">
+                    <a href="https://paypal.me/@thanattsittS" target="_blank" rel="noopener" title="Support via PayPal" class="social-link">
                         <i class="fab fa-paypal"></i>
                     </a>
-                    <a href="https://bsky.app/profile/thanattsitt.bsky.social" target="_blank" rel="noopener" title="Follow on Bluesky">
+                    <a href="https://bsky.app/profile/thanattsitt.bsky.social" target="_blank" rel="noopener" title="Follow on Bluesky" class="social-link">
                         <i class="fas fa-cloud"></i>
                     </a>
-                    <a href="https://rss.com/podcasts/than-podcast-cosmic/" target="_blank" rel="noopener" title="Listen to Podcast">
+                    <a href="https://rss.com/podcasts/than-podcast-cosmic/" target="_blank" rel="noopener" title="Listen to Podcast" class="social-link">
                         <i class="fas fa-podcast"></i>
                     </a>
-                    <a href="https://www.instagram.com/thanattsitt.s/" target="_blank" rel="noopener" title="Follow on Instagram">
+                    <a href="https://www.instagram.com/thanattsitt.s/" target="_blank" rel="noopener" title="Follow on Instagram" class="social-link">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.threads.net/@thanattsitt.s" target="_blank" rel="noopener" title="Follow on Threads">
+                    <a href="https://www.threads.net/@thanattsitt.s" target="_blank" rel="noopener" title="Follow on Threads" class="social-link">
                         <i class="fab fa-threads"></i>
                     </a>
+                    <a href="https://github.com/Pigletpeakkung/holy-bless-divine-wisdom-generator" target="_blank" rel="noopener" title="View Source Code" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                
+                <div class="app-info mt-3">
+                    <small class="text-muted">
+                        <i class="fas fa-code"></i> Open Source • 
+                        <i class="fas fa-mobile-alt"></i> Mobile Friendly • 
+                        <i class="fas fa-wifi"></i> Works Offline • 
+                        <span id="appVersion">v1.0</span>
+                    </small>
                 </div>
             </div>
         </footer>
+    </div>
+
+    <!-- Modal for Detailed Stats -->
+    <div class="modal fade" id="statsModal" tabindex="-1" role="dialog" aria-labelledby="statsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="statsModalLabel">
+                        <i class="fas fa-chart-bar"></i> Detailed Statistics
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="statsModalBody">
+                    <!-- Stats content will be populated here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="exportStatsBtn">
+                        <i class="fas fa-download"></i> Export Stats
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->
@@ -186,9 +375,29 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     
     <!-- Toastify for notifications -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.11.2/Toastify.min.js" integrity="sha512-E/vaI5ZDoL7MrORhJdHD7QJWf3Nz+Uj6S2Jy8Dsh9+DtsGvMWUgNwQC9xGSzpd0nFyZyoNp1cFRkVQzG1Yqjpw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.12.0/Toastify.min.js" integrity="sha512-wKlHiUBOcJDsBv0oxpCQw6t25ZQSRV8XnyDwTpRmzuJUgOwmqVKABeLUZCZmhyWzQzGogzJqtLvqNpHjOmOtfQ==" crossorigin="anonymous"></script>
     
-    <!-- Custom JavaScript -->
+    <!-- Utils -->
+    <script src="src/utils/api.js"></script>
+    <script src="src/utils/storage.js"></script>
+    <script src="src/utils/helpers.js"></script>
+    
+    <!-- Main Application -->
     <script src="app.js"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(function(registration) {
+                        console.log('✅ ServiceWorker registration successful');
+                    })
+                    .catch(function(err) {
+                        console.log('❌ ServiceWorker registration failed:', err);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>
