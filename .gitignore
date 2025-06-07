@@ -1,5 +1,52 @@
-# .gitignore
+# Node modules
 node_modules/
+
+# Logs
+logs
 *.log
+npm-debug.log*
+
+# Environment variables
+.env
+
+# Build directories (if applicable)
+dist/
+build/
+out/
+
+# IDE or Editor configurations
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Mac OS generated files
 .DS_Store
-*.bak
+
+# Windows generated files
+Thumbs.db
+ehthumbs.db
+
+# Temporary files
+temp/
+tmp/
+*.swp
+
+# Coverage reports (if testing)
+coverage/
+*.lcov
+
+# Ignore any files created by package managers
+package-lock.json
+yarn.lock
+
+# Ignore any compiled files
+*.o
+*.out
+
+# Ignore directories or files for test reports
+test-results/
+tests/report/
+
+# Ignore any personal or local settings
+settings.json
