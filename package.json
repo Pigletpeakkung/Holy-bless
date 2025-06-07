@@ -1,0 +1,36 @@
+{
+  "name": "sacred-geometry-app",
+  "version": "1.0.0",
+  "description": "An application that explores and displays sacred geometry, sigils, and spiritual teachings using various APIs.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",   // To make HTTP requests to external APIs
+    "express": "^4.17.1", // To set up a web server framework
+    "dotenv": "^10.0.0"   // To manage environment variables
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"   // To automatically restart server during development
+  },
+  "keywords": [
+    "sacred",
+    "geometry",
+    "sigils",
+    "spirituality",
+    "API",
+    "OpenClipart",
+    "Wikipedia",
+    "Flickr",
+    "MetMuseum"
+  ],
+  "author": "Thanattsitt Santisamranwilai", // Your name
+  "license": "MIT", // or another license of your choice
+  "homepage": "https://yourprojecthomepage.com", // Replace with your project's homepage
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pigletpeakkung/sacred-geometry-app.git" // Replace with your repo URL
+  }
+}
